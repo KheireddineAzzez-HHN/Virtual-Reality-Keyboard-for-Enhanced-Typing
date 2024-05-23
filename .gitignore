@@ -1,0 +1,65 @@
+# This .gitignore file is tailored for Unity projects using Meta VR SDK
+
+# =============== #
+# Unity generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+
+# ============================= #
+# Visual Studio / MonoDevelop   #
+# ============================= #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.unityproj
+/*.sln
+/*.suo
+/*.tmp
+/*.user
+/*.appinfo
+/*.booproj
+*.svd
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# ===================== #
+# Builds and output     #
+# ===================== #
+/[Bb]uild/
+/[Bb]uilds/
+/buildswindows/
+# ===================== #
+# VR SDKs and Meta/Oculus Specific #
+# ===================== #
+# Exclude Meta/Oculus generated files and plugin data
+# Be sure to adjust according to your specific use cases
+[Oo]culus/[Vv]r/[Aa]ssets/
+
+# ===================== #
+# Dependency directories #
+# ===================== #
+# Exclude package and plugin directories
+[Pp]ackages/
+[Aa]ssets/[Pp]lugins/
+[Aa]ssets/[Ss]treamingAssets/
+
+# ============= #
+# Crash reports #
+# ============= #
+sysinfo.txt
