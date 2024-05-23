@@ -37,15 +37,26 @@ public class keyPart : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        parentKey.OnKeyPartCollisionEnter(this);
+        if (Enum.TryParse<KeyboardConfig.KeyboardInteractiveTag>(other.tag, true, 
+            out KeyboardConfig.KeyboardInteractiveTag tagValue) && Enum.IsDefined(typeof(KeyboardConfig.KeyboardInteractiveTag), tagValue)) {
+
+            parentKey.OnKeyPartCollisionEnter(this);
+
+        }
 
     }
 
     void OnTriggerExit(Collider other)
     {
-        
-         parentKey.OnKeyPartCollisionExit(this);
-      
+        if (Enum.TryParse<KeyboardConfig.KeyboardInteractiveTag>(other.tag, true,
+            out KeyboardConfig.KeyboardInteractiveTag tagValue) && Enum.IsDefined(typeof(KeyboardConfig.KeyboardInteractiveTag), tagValue))
+        {
+
+            parentKey.OnKeyPartCollisionExit(this);
+
+
+        }
+
     }
 
 

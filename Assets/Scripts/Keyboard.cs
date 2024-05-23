@@ -13,7 +13,6 @@ public class Keyboard : MonoBehaviour
 
     public key keyToType=null;
 
-    bool active_update = false;
 
 
     private void Awake()
@@ -41,10 +40,10 @@ public class Keyboard : MonoBehaviour
 
     }
     private void handleEnterCollision_Keys() {
-        if (active_update == false && activeKeyCollisions.Count > 0)
+        if (activeKeyCollisions.Count > 0)
         {
             keyToType = highestWeigh_Key();
-
+            
         }
     }
 
@@ -93,15 +92,19 @@ public class Keyboard : MonoBehaviour
     private void OnKeyCollisionExit(key key)
     {
 
-        if (keyToType.collidedKeyParts.Count==0)
+        if(keyToType != null)
         {
-           
-             
-            handleExistCollision_Keys();
+            if (keyToType.collidedKeyParts.Count == 0)
+            {
 
-            CleanCollided();
-        
+
+                handleExistCollision_Keys();
+
+                CleanCollided();
+
+            }
         }
+       
     }
 
     public key highestWeigh_Key() {
@@ -129,6 +132,7 @@ public class Keyboard : MonoBehaviour
         {
 
             activeKeyCollisions.Clear();
+            keyToType = null;
             return true;
         }
         return false;
