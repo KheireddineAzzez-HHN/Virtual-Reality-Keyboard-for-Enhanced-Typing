@@ -16,7 +16,7 @@ public class key : MonoBehaviour
     public string extractedKeyName;
     public event Action<key> OnKeyCollisionEnter;
     public event Action<key> OnKeyCollisionExit;
-
+   
     void Start()
     {
         PopulateKeysParts();
@@ -44,16 +44,9 @@ public class key : MonoBehaviour
                 newKeyPart.OnKeyPartCollisionEnter += OnKeyPartCollisionEnter;
                 newKeyPart.OnKeyPartCollisionExit += OnKeyPartCollisionExit;
 
-
-
-
-
                 if (keyPartName.Equals(KeyboardConfig.KeyPartNames.frame)){
                     keyFrame = newKeyPart;
                 };
-                   
-             
-                
 
             }
             else
@@ -113,5 +106,8 @@ public class key : MonoBehaviour
         return false;
     }
 
+    public void addComponents()
+    {
 
+    }
 }
