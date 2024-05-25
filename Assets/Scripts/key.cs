@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 public class key : MonoBehaviour
 {
     public KeyboardConfig.KeyNames keyName;
@@ -12,15 +13,24 @@ public class key : MonoBehaviour
 
     public float keyWeigh = 0f;
 
+    private Animator animator;
+
+    public KeyAnimationControl animationControl;
+    public Audiocontrol keyaudio;
+
     public keyPart keyFrame;
     public string extractedKeyName;
     public event Action<key> OnKeyCollisionEnter;
     public event Action<key> OnKeyCollisionExit;
+    
    
     void Start()
     {
+
         PopulateKeysParts();
         extractedKeyName = key_utils.Extrat_keyName(this.keyName);
+        this.addComponents();
+
     }
 
     void Update()
@@ -109,5 +119,32 @@ public class key : MonoBehaviour
     public void addComponents()
     {
 
-    }
+
+         animator = gameObject.GetComponent<Animator>();
+        if (animator == null)
+        {
+            animator = gameObject.AddComponent<Animator>();
+        }
+        if (key_utils.IsAlphabetic(this.extractedKeyName)){
+
+            RuntimeAnimatorController animatorController = Resources.Load<RuntimeAnimatorController>("animation/KeyAnimation");
+
+            if (animatorController != null)
+            {
+                animator.runtimeAnimatorController = animatorController;
+                
+                animationControl = gameObject.AddComponent<KeyAnimationControl>();
+            }
+            else
+            {
+                Debug.LogError("Failed to load Animator Controller. Check the path and make sure it's in a Resources folder.");
+            }
+
+        }
+      
+       }
+    
+    
+
 }
+

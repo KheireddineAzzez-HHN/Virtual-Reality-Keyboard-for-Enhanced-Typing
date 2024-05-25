@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
- 
+using System;
 public class Keyboard : MonoBehaviour
 {
 
@@ -12,6 +12,17 @@ public class Keyboard : MonoBehaviour
     private Dictionary<key, int> activeKeyCollisions = new Dictionary<key, int>();
 
     public key keyToType=null;
+    public bool animationtriggered = false;
+    public bool Keydetected = false;
+
+
+    private KeyboardVisualAudioEffects keyboardEffects = new KeyboardVisualAudioEffects();
+    public static event Action<key,KeyboardConfig.keyStatus> OnKeyTypevisualEffect;
+
+    private Audiocontrol audiocontroller = new Audiocontrol();
+
+
+    public  static event Action<key, KeyboardConfig.keyStatus> OnKeyTypeAduioEffect;
 
 
 
@@ -40,15 +51,22 @@ public class Keyboard : MonoBehaviour
 
     }
     private void handleEnterCollision_Keys() {
-        if (activeKeyCollisions.Count > 0)
+        if (activeKeyCollisions.Count > 0 && Keydetected==false)
         {
             keyToType = highestWeigh_Key();
-            
+            OnKeyTypevisualEffect.Invoke(keyToType, KeyboardConfig.keyStatus.PRESSED);
+
+            keyToType.animationControl.PressKey();
+            Keydetected = true;
+
         }
     }
 
     private void handleExistCollision_Keys() {
+
+        OnKeyTypevisualEffect.Invoke(keyToType,KeyboardConfig.keyStatus.REALESED);
         print(keyToType.extractedKeyName);
+        
     }
 
     private void PopulateKeys()
@@ -133,6 +151,7 @@ public class Keyboard : MonoBehaviour
 
             activeKeyCollisions.Clear();
             keyToType = null;
+            Keydetected = false;
             return true;
         }
         return false;

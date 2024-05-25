@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-
+using System.Linq;
 public class key_utils : MonoBehaviour
 {
 
@@ -85,6 +85,11 @@ public class key_utils : MonoBehaviour
     {
         return keyname.ToString().Split("_")[1];
 
+    }
+
+    public static bool IsAlphabetic(string input)
+    {
+        return !string.IsNullOrEmpty(input) && input.All(char.IsLetter);
     }
 }
 

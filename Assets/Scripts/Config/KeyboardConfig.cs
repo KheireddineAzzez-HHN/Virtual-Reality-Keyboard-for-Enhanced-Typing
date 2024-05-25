@@ -19,7 +19,12 @@ public class KeyboardConfig : MonoBehaviour
     }
 
 
+    public enum keyStatus
+    {
 
+        PRESSED,
+        REALESED
+    }
     public enum KeyNames
     {
         KEY_0,
