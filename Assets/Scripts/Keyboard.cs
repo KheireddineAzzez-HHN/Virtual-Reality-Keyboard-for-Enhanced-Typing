@@ -19,7 +19,6 @@ public class Keyboard : MonoBehaviour
     private KeyboardVisualAudioEffects keyboardEffects = new KeyboardVisualAudioEffects();
     public static event Action<key,KeyboardConfig.keyStatus> OnKeyTypevisualEffect;
 
-    private Audiocontrol audiocontroller = new Audiocontrol();
 
 
     public  static event Action<key, KeyboardConfig.keyStatus> OnKeyTypeAduioEffect;

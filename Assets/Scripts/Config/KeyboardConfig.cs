@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class KeyboardConfig : MonoBehaviour
 {
-    public  static float baseWeigh = 0f;
+    public static float baseWeigh = 0f;
 
     public static int columns = 6;
     public static int rows = 10;
+    public static string keyAudioPath = "audio/";
     void Start()
     {
 
@@ -163,9 +164,14 @@ public class KeyboardConfig : MonoBehaviour
     }
 
 
-     public enum KeyboardInteractiveTag
+    public enum KeyboardInteractiveTag
     {
 
         Thumb_cap
+    }
+
+    public enum KeySoundFiles
+    {
+        _click_key
     }
 }

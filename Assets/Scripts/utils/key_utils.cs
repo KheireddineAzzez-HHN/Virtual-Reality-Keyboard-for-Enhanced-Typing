@@ -91,6 +91,14 @@ public class key_utils : MonoBehaviour
     {
         return !string.IsNullOrEmpty(input) && input.All(char.IsLetter);
     }
+
+    public static string  keySoundPath(string keyName) {
+
+
+        return KeyboardConfig.keyAudioPath+ keyName + KeyboardConfig.KeySoundFiles._click_key.ToString();
+            
+            
+            }
 }
 
 

@@ -16,8 +16,10 @@ public class key : MonoBehaviour
     private Animator animator;
 
     public KeyAnimationControl animationControl;
-    public Audiocontrol keyaudio;
+    public keyAudioControl keyaudio=null;
 
+
+    public string keySoundPath=null;
     public keyPart keyFrame;
     public string extractedKeyName;
     public event Action<key> OnKeyCollisionEnter;
@@ -29,6 +31,7 @@ public class key : MonoBehaviour
 
         PopulateKeysParts();
         extractedKeyName = key_utils.Extrat_keyName(this.keyName);
+        keySoundPath = key_utils.keySoundPath(extractedKeyName);
         this.addComponents();
 
     }
@@ -121,6 +124,9 @@ public class key : MonoBehaviour
 
 
          animator = gameObject.GetComponent<Animator>();
+        keyaudio = gameObject.AddComponent<keyAudioControl>();
+
+
         if (animator == null)
         {
             animator = gameObject.AddComponent<Animator>();
@@ -141,10 +147,11 @@ public class key : MonoBehaviour
             }
 
         }
-      
-       }
-    
-    
+
+
+
+    }
+
 
 }
 

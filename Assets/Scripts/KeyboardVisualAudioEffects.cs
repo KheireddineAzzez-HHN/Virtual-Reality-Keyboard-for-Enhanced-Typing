@@ -56,6 +56,7 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
     private void HandleKeyPresss(key key) {
 
         key.animationControl.PressKey();
+        key.keyaudio.PlaySoundByPath(key.keySoundPath);
     
     }
     private void HandleKeyRelease(key key)
