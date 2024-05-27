@@ -11,6 +11,10 @@ public class key : MonoBehaviour
 
     public  Dictionary<keyPart, bool> collidedKeyParts = new Dictionary<keyPart, bool>();
 
+
+    public Dictionary<keyPart, bool> rayCastedkeyparts = new Dictionary<keyPart, bool>();
+
+
     public float keyWeigh = 0f;
 
     private Animator animator;
@@ -24,8 +28,10 @@ public class key : MonoBehaviour
     public string extractedKeyName;
     public event Action<key> OnKeyCollisionEnter;
     public event Action<key> OnKeyCollisionExit;
-    
-   
+
+    public event Action<key> OnKeyRayCastEnter;
+    public event Action<key> OnKeyRayCastExit;
+
     void Start()
     {
 
@@ -57,6 +63,10 @@ public class key : MonoBehaviour
                 newKeyPart.OnKeyPartCollisionEnter += OnKeyPartCollisionEnter;
                 newKeyPart.OnKeyPartCollisionExit += OnKeyPartCollisionExit;
 
+
+                newKeyPart.OnKeyPartRayCastEnter += OnkeyPartRayCastEnter;
+                newKeyPart.OnKeyPartRayCastExist += OnkeyPartRayCastExist;
+
                 if (keyPartName.Equals(KeyboardConfig.KeyPartNames.frame)){
                     keyFrame = newKeyPart;
                 };
@@ -70,8 +80,35 @@ public class key : MonoBehaviour
     }
 
 
+    public void OnkeyPartRayCastEnter(keyPart keypart)
 
 
+    {
+
+        if (!rayCastedkeyparts.ContainsKey(keypart))
+        {
+
+            this.rayCastedkeyparts.Add(keypart, true);
+            this.OnKeyRayCastExit.Invoke(this);
+
+
+        }
+
+
+    }
+    public void OnkeyPartRayCastExist(keyPart keypart)
+    {
+
+
+        if (rayCastedkeyparts.ContainsKey(keypart))
+        {
+
+            this.rayCastedkeyparts.Remove(keypart);
+
+            this.OnKeyRayCastExit.Invoke(this);
+
+        }
+    }
 
     public void OnKeyPartCollisionEnter(keyPart part)
     {
@@ -83,6 +120,14 @@ public class key : MonoBehaviour
                 OnKeyCollisionEnter?.Invoke(this);
             }
         }
+    }
+
+    public void onKeyPartRayCastEnter(keyPart part)
+    {
+
+        this.rayCastedkeyparts.Add(part,true);
+
+
     }
 
     public void OnKeyPartCollisionExit(keyPart part)

@@ -1,5 +1,6 @@
 using UnityEngine;
-
+using System;
+using System.Collections.Generic;
 public class KeyboardVisualAudioEffects : MonoBehaviour
 {
     // Static instance of the class
@@ -29,6 +30,8 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
     void OnEnable()
     {
         Keyboard.OnKeyTypevisualEffect += HandleKeyTyped;
+        Keyboard.OnKeypartsRayCast += HandlekeypartsRayCast;
+
     }
 
     void OnDisable()
@@ -66,4 +69,14 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
 
     }
 
+
+    public void HandlekeypartsRayCast ( HashSet<keyPart> keyParts ,KeyboardConfig.RayCast RayCastHandle)
+    {
+
+     if (RayCastHandle.Equals(KeyboardConfig.RayCast.RAYCASTENTER))
+        {
+            print("Ray Cast Enter");
+        }
+
+    }
 }

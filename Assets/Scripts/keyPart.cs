@@ -10,9 +10,14 @@ public class keyPart : MonoBehaviour
 
     public event Action<keyPart> OnKeyPartCollisionEnter;
     public event Action<keyPart> OnKeyPartCollisionExit;
+
+    public event Action<keyPart> OnKeyPartRayCastEnter;
+    public event Action<keyPart> OnKeyPartRayCastExist;
+
     private key parentKey;
     public float keypartWeight = 0.00f;
     public Vector2Int cordinte;
+    public Vector3 boxsize;
     void Start()
     {
         addComponents();
@@ -25,7 +30,8 @@ public class keyPart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
     }
 
     void addComponents()
@@ -59,5 +65,9 @@ public class keyPart : MonoBehaviour
 
     }
 
+    public void changeColort()
+    {
 
+
+    }
 }

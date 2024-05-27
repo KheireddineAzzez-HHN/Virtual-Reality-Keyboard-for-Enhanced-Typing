@@ -25,6 +25,7 @@ public class KeyboardConfig : MonoBehaviour
 
         PRESSED,
         REALESED
+        
     }
     public enum KeyNames
     {
@@ -174,4 +175,12 @@ public class KeyboardConfig : MonoBehaviour
     {
         _click_key
     }
+
+    public enum RayCast {
+    
+    RAYCASTENTER,
+    RAYCASTEXIST
+
+    }
+
 }
