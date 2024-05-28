@@ -30,7 +30,7 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
     void OnEnable()
     {
         Keyboard.OnKeyTypevisualEffect += HandleKeyTyped;
-        Keyboard.OnKeypartsRayCast += HandlekeypartsRayCast;
+        ThumbCap.onRayCastKeypart += HandlekeypartsRayCast;
 
     }
 
@@ -70,12 +70,20 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
     }
 
 
-    public void HandlekeypartsRayCast ( HashSet<keyPart> keyParts ,KeyboardConfig.RayCast RayCastHandle)
+    public void HandlekeypartsRayCast ( keyPart keypart ,KeyboardConfig.RayCast RayCastHandle)
     {
 
      if (RayCastHandle.Equals(KeyboardConfig.RayCast.RAYCASTENTER))
         {
-            print("Ray Cast Enter");
+            keypart.ChangeColorBasedOnWeight();
+            print((keypart.parentKey.keyName.ToString()+" : "+ keypart.keypartWeight));
+        }
+
+     else if (RayCastHandle.Equals(KeyboardConfig.RayCast.RAYCASTEXIT))
+        {
+
+            keypart.ResetColor();
+
         }
 
     }

@@ -25,7 +25,7 @@ public class KeyboardConfig : MonoBehaviour
 
         PRESSED,
         REALESED
-        
+
     }
     public enum KeyNames
     {
@@ -80,7 +80,6 @@ public class KeyboardConfig : MonoBehaviour
 
     public enum KeyPartNames
     {
-        a_upper_case,
         bottom_edge_l1,
         bottom_edge_l2,
         bottom_edge_l3,
@@ -177,9 +176,24 @@ public class KeyboardConfig : MonoBehaviour
     }
 
     public enum RayCast {
-    
-    RAYCASTENTER,
-    RAYCASTEXIST
+
+        RAYCASTENTER,
+        RAYCASTEXIT,
+
+
+    }
+
+    public enum MaskLayers
+    {
+
+        KEYPARTLAYER
+    }
+   public static class Sizes{
+
+        static int RayCastSize_X = 1;
+        static int RayCastSize_Y = 1;
+        static int RayCastSize_Z = 5;
+
 
     }
 

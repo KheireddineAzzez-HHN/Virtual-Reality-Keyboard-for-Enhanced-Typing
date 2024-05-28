@@ -1,18 +1,65 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class ThumbCap : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public Vector3 RaycastBox;
+    public LayerMask keyPartLayerMask;
+
+    private List<keyPart> lastKeyParts = new List<keyPart>();
+    public static event Action<keyPart, KeyboardConfig.RayCast> onRayCastKeypart;
+    private BoxCollider boxCollider;
+
+    private void Start()
     {
-        
+        boxCollider = gameObject.GetComponent<BoxCollider>();
+        RaycastBox = new Vector3(boxCollider.size.x *10 , boxCollider.size.y*10 , boxCollider.size.z *100);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        DetectKeyPartsCovered();
     }
+
+    private void DetectKeyPartsCovered()
+    {
+        Vector3 boxCenter = transform.TransformPoint(boxCollider.center + new Vector3(0, 0, boxCollider.size.z));
+
+        // Get all colliders within the box
+        Collider[] hitColliders = Physics.OverlapBox(boxCenter, RaycastBox * 0.5f, transform.rotation, keyPartLayerMask);
+
+        List<keyPart> hitKeyParts = new List<keyPart>();
+
+        foreach (var hitCollider in hitColliders)
+        {
+            // Get the keyPart component from the hit object
+            keyPart hitKeyPart = hitCollider.GetComponent<keyPart>();
+
+            if (hitKeyPart != null)
+            {
+                hitKeyParts.Add(hitKeyPart);
+
+                // Trigger the OnKeyPartRayCastEnter event if this is a new key part
+                if (!lastKeyParts.Contains(hitKeyPart))
+                {
+                    onRayCastKeypart?.Invoke(hitKeyPart, KeyboardConfig.RayCast.RAYCASTENTER);
+                }
+            }
+        }
+
+        // Reset colors for key parts that are no longer being hit
+        foreach (var keyPart in lastKeyParts)
+        {
+            if (!hitKeyParts.Contains(keyPart))
+            {
+                onRayCastKeypart?.Invoke(keyPart, KeyboardConfig.RayCast.RAYCASTEXIT);
+            }
+        }
+
+        lastKeyParts = hitKeyParts;
+    }
+
+
 }

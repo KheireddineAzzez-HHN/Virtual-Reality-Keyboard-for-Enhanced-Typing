@@ -64,8 +64,7 @@ public class key : MonoBehaviour
                 newKeyPart.OnKeyPartCollisionExit += OnKeyPartCollisionExit;
 
 
-                newKeyPart.OnKeyPartRayCastEnter += OnkeyPartRayCastEnter;
-                newKeyPart.OnKeyPartRayCastExist += OnkeyPartRayCastExist;
+
 
                 if (keyPartName.Equals(KeyboardConfig.KeyPartNames.frame)){
                     keyFrame = newKeyPart;

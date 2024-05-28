@@ -25,7 +25,7 @@ public class Keyboard : MonoBehaviour
 
     public static event Action<key, KeyboardConfig.keyStatus> OnKeyTypeAduioEffect;
 
-    public static event Action<HashSet<keyPart>, KeyboardConfig.RayCast> OnKeypartsRayCast;
+
 
 
 
@@ -88,8 +88,6 @@ public class Keyboard : MonoBehaviour
                 newKey.OnKeyCollisionEnter += OnKeyCollisionEnter;
                 newKey.OnKeyCollisionExit += OnKeyCollisionExit;
 
-                newKey.OnKeyRayCastEnter += keyPartsRaycastEnter;
-                newKey.OnKeyRayCastExit += keyPartsRaycastExist;
 
                 keys[keyName] = newKey;
 
@@ -166,19 +164,6 @@ public class Keyboard : MonoBehaviour
     }
 
 
-    public void keyPartsRaycastEnter(key key)
-    {
 
-
-        HashSet<keyPart> keyparts = new HashSet<keyPart>(key.rayCastedkeyparts.Keys);
-
-
-        OnKeypartsRayCast.Invoke(keyparts, KeyboardConfig.RayCast.RAYCASTENTER);
-
-    }
-    public void keyPartsRaycastExist(key key)
-    {
-
-
-    }
+ 
 }
