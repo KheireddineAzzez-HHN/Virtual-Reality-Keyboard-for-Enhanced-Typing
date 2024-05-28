@@ -9,6 +9,9 @@ public class KeyboardConfig : MonoBehaviour
     public static int columns = 6;
     public static int rows = 10;
     public static string keyAudioPath = "audio/";
+
+    public static  Color startColor = Color.white;
+    public static  Color endColor = Color.blue; 
     void Start()
     {
 

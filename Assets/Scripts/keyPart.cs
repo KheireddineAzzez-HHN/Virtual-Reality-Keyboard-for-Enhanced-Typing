@@ -19,8 +19,7 @@ public class keyPart : MonoBehaviour
     public Vector3 boxsize;
     public KeyboardConfig.MaskLayers KeypartLayerName = KeyboardConfig.MaskLayers.KEYPARTLAYER;
 
-    private Color startColor = Color.white; // Color for weight 0
-    private Color endColor = Color.blue; // Color for weight 1
+  
 
     void Start()
     {
@@ -67,12 +66,11 @@ public class keyPart : MonoBehaviour
         }
     }
 
-    public void ChangeColorBasedOnWeight()
+    public void ChangeColorBasedOnWeight(Color color)
     {
         if (renderer != null)
         {
-            Color weightColor = Color.Lerp(startColor, endColor, keypartWeight);
-            renderer.material.color = weightColor;
+            renderer.material.color = color;
         }
     }
 

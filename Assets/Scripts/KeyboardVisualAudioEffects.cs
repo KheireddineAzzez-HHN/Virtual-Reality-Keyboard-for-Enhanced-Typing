@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class KeyboardVisualAudioEffects : MonoBehaviour
 {
     // Static instance of the class
+
     public static KeyboardVisualAudioEffects Instance { get; private set; }
 
     void Awake()
@@ -75,7 +76,9 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
 
      if (RayCastHandle.Equals(KeyboardConfig.RayCast.RAYCASTENTER))
         {
-            keypart.ChangeColorBasedOnWeight();
+
+           Color  assigned_color=AssignKeypartColort(KeyboardConfig.startColor, KeyboardConfig.endColor, keypart.keypartWeight);
+            keypart.ChangeColorBasedOnWeight(assigned_color);
             print((keypart.parentKey.keyName.ToString()+" : "+ keypart.keypartWeight));
         }
 
@@ -86,5 +89,13 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
 
         }
 
+    }
+
+    private Color AssignKeypartColort(Color startColor, Color endColor, float keypartWeight)
+    {
+
+        Color weightColor = Color.Lerp(startColor, endColor, keypartWeight);
+
+        return weightColor;
     }
 }
