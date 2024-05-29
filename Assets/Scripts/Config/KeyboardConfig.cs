@@ -8,9 +8,9 @@ public class KeyboardConfig : MonoBehaviour
     public static int columns = 6;
     public static int rows = 10;
     public static string keyAudioPath = "audio/";
-    public static float basicWeightKeypart = 0.08f;
-    public static  Color startColor = Color.white;
-    public static  Color endColor = Color.blue;
+    public static float basicWeightKeypart = 0.1f;
+    public static  Color startColor = Color.blue;
+    public static  Color endColor = Color.magenta;
     public static float keyPatNormalWeightColorMultplicator = 1f;
     public static float keyPartBaseWeightColorMultiplicator = 7f;
      
