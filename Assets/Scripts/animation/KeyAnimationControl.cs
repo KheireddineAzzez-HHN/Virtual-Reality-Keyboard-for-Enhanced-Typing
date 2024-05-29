@@ -21,4 +21,9 @@ public class KeyAnimationControl : MonoBehaviour
     {
         animator.Play("Release");
     }
+
+    public bool IsAnimating()
+    {
+        return animator.GetBool("isAnimating");
+    }
 }

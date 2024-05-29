@@ -12,6 +12,7 @@ public class ThumbCap : MonoBehaviour
     public static event Action<keyPart, KeyboardConfig.RayCast> onRayCastKeypart;
     private BoxCollider boxCollider;
 
+    private bool lastPartsCleared = false;
     private void Start()
     {
         boxCollider = gameObject.GetComponent<BoxCollider>();
@@ -20,7 +21,26 @@ public class ThumbCap : MonoBehaviour
 
     void Update()
     {
-        DetectKeyPartsCovered();
+        if (Keyboard.Keydetected == false)
+        {
+            DetectKeyPartsCovered();
+
+            lastPartsCleared = false;
+        }
+       else if (Keyboard.Keydetected && !lastPartsCleared)
+        {
+
+            foreach(keyPart keypart in lastKeyParts)
+            {
+
+                onRayCastKeypart?.Invoke(keypart, KeyboardConfig.RayCast.RAYCASTEXIT);
+
+            }
+            lastKeyParts.Clear();
+
+            lastPartsCleared = true;
+        }
+
     }
 
     private void DetectKeyPartsCovered()

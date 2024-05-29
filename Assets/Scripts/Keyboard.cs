@@ -17,7 +17,7 @@ public class Keyboard : MonoBehaviour
 
     public key keyToType = null;
     public bool animationtriggered = false;
-    public bool Keydetected = false;
+    public static bool Keydetected = false;
 
     private KeyboardVisualAudioEffects keyboardEffects = new KeyboardVisualAudioEffects();
 

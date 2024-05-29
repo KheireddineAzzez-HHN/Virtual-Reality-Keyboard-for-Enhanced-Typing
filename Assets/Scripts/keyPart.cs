@@ -14,24 +14,45 @@ public class keyPart : MonoBehaviour
     private Renderer renderer;
     private Color originalColor;
     public key parentKey;
-    public float keypartWeight = 0.00f;
+    public float keypartWeight=0.0f ;
     public Vector2Int cordinte;
     public Vector3 boxsize;
     public KeyboardConfig.MaskLayers KeypartLayerName = KeyboardConfig.MaskLayers.KEYPARTLAYER;
-
+    public float ColorThumbHover=0.0f;
+    private  keyPart()
+    {
   
+
+    }
 
     void Start()
     {
-        addComponents();
-
         cordinte = key_utils.GetCoordinatesFromName(keyPartName.ToString());
-        keypartWeight = key_utils.CalculateWeight(cordinte.x, cordinte.y);
+
+        if (KeyboardConfig.KeypartsBaseWeight.Contains(keyPartName))
+        {
+            keypartWeight = KeyboardConfig.basicWeightKeypart;
+            ColorThumbHover = keypartWeight * KeyboardConfig.keyPartBaseWeightColorMultiplicator;
+        }
+        else
+        {
+            keypartWeight = key_utils.CalculateWeight(cordinte.x, cordinte.y);
+            ColorThumbHover = keypartWeight * KeyboardConfig.keyPatNormalWeightColorMultplicator;
+
+        }
+
+
+
+        addComponents();
+       // Material liquidFillMaterial = Resources.Load<Material>("Materials/DefaultSahder");
+
+    
         renderer = GetComponent<Renderer>();
 
         if (renderer != null)
         {
-            originalColor = renderer.material.color;
+          originalColor = renderer.material.color;
+
         }
 
         gameObject.layer = LayerMask.NameToLayer(KeypartLayerName.ToString());
@@ -70,7 +91,9 @@ public class keyPart : MonoBehaviour
     {
         if (renderer != null)
         {
-            renderer.material.color = color;
+          renderer.material.color = color;
+
+
         }
     }
 
@@ -78,7 +101,9 @@ public class keyPart : MonoBehaviour
     {
         if (renderer != null)
         {
-            renderer.material.color = originalColor;
+         renderer.material.color = originalColor;
+
+
         }
     }
 }

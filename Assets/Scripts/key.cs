@@ -22,13 +22,14 @@ public class key : MonoBehaviour
     public KeyAnimationControl animationControl;
     public keyAudioControl keyaudio=null;
 
+    public keyPart minimunWeightKeypart;
 
     public string keySoundPath=null;
     public keyPart keyFrame;
     public string extractedKeyName;
     public event Action<key> OnKeyCollisionEnter;
     public event Action<key> OnKeyCollisionExit;
-
+    public float minimumKeypartmWeight =0.0f ;
     public event Action<key> OnKeyRayCastEnter;
     public event Action<key> OnKeyRayCastExit;
 
@@ -58,7 +59,17 @@ public class key : MonoBehaviour
                 keyPart newKeyPart = child.gameObject.AddComponent<keyPart>();
                 newKeyPart.keyPartName = keyPartName;
                 newKeyPart.keyname = this.keyName;
-                key_parts[keyPartName] = newKeyPart;
+
+
+
+                if (keyPartName.Equals(KeyboardConfig.KeyPartNames.Frame))
+                {
+                    keyFrame = newKeyPart;
+                }
+                else
+                {
+                    key_parts[keyPartName] = newKeyPart;
+                }
 
                 newKeyPart.OnKeyPartCollisionEnter += OnKeyPartCollisionEnter;
                 newKeyPart.OnKeyPartCollisionExit += OnKeyPartCollisionExit;
@@ -66,9 +77,6 @@ public class key : MonoBehaviour
 
 
 
-                if (keyPartName.Equals(KeyboardConfig.KeyPartNames.frame)){
-                    keyFrame = newKeyPart;
-                };
 
             }
             else
@@ -76,6 +84,8 @@ public class key : MonoBehaviour
                 Debug.LogError("Key part name mismatch or not found in enum: " + child.name);
             }
         }
+
+
     }
 
 

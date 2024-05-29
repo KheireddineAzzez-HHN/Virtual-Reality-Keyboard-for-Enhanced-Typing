@@ -99,6 +99,26 @@ public class key_utils : MonoBehaviour
             
             
             }
+
+
+
+
+    public static keyPart FindKeyPartWithMinWeight(IEnumerable<keyPart> keyParts)
+    {
+        keyPart minWeightKeyPart = null;
+        float minWeight = float.MaxValue;
+
+        foreach (var kp in keyParts)
+        {
+            if (kp.keypartWeight < minWeight)
+            {
+                minWeight = kp.keypartWeight;
+                minWeightKeyPart = kp;
+            }
+        }
+
+        return minWeightKeyPart;
+    }
 }
 
 

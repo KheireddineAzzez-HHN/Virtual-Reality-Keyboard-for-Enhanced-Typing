@@ -6,7 +6,6 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
     // Static instance of the class
 
     public static KeyboardVisualAudioEffects Instance { get; private set; }
-
     void Awake()
     {
         if (Instance == null)
@@ -45,7 +44,6 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
         if (keystatus.Equals(KeyboardConfig.keyStatus.PRESSED))
         {
             HandleKeyPresss(key);
-
           
         }
 
@@ -77,7 +75,8 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
      if (RayCastHandle.Equals(KeyboardConfig.RayCast.RAYCASTENTER))
         {
 
-           Color  assigned_color=AssignKeypartColort(KeyboardConfig.startColor, KeyboardConfig.endColor, keypart.keypartWeight);
+    
+            Color  assigned_color=AssignKeypartColort(KeyboardConfig.startColor, KeyboardConfig.endColor, keypart.ColorThumbHover);
             keypart.ChangeColorBasedOnWeight(assigned_color);
             print((keypart.parentKey.keyName.ToString()+" : "+ keypart.keypartWeight));
         }
@@ -93,9 +92,15 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
 
     private Color AssignKeypartColort(Color startColor, Color endColor, float keypartWeight)
     {
-
+       
         Color weightColor = Color.Lerp(startColor, endColor, keypartWeight);
 
         return weightColor;
     }
+
+    public  static float BaseWEeightPartsWeight(Color startColor, Color endColor, float keypartWeight)
+    {
+        return 0f;
+    }
+
 }

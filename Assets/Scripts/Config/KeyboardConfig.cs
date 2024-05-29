@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class KeyboardConfig : MonoBehaviour
 {
-    public static float baseWeigh = 0f;
-
+    
     public static int columns = 6;
     public static int rows = 10;
     public static string keyAudioPath = "audio/";
-
+    public static float basicWeightKeypart = 0.08f;
     public static  Color startColor = Color.white;
-    public static  Color endColor = Color.blue; 
+    public static  Color endColor = Color.blue;
+    public static float keyPatNormalWeightColorMultplicator = 1f;
+    public static float keyPartBaseWeightColorMultiplicator = 7f;
+     
     void Start()
     {
 
@@ -123,7 +125,7 @@ public class KeyboardConfig : MonoBehaviour
         bottom_r13,
         bottom_r14,
         bottom_r15,
-        frame,
+        Frame,
         top_edge_l1,
         top_edge_l2,
         top_edge_l3,
@@ -166,6 +168,7 @@ public class KeyboardConfig : MonoBehaviour
         top_r15
     }
 
+ 
 
     public enum KeyboardInteractiveTag
     {
@@ -191,13 +194,30 @@ public class KeyboardConfig : MonoBehaviour
 
         KEYPARTLAYER
     }
-   public static class Sizes{
+    public static HashSet<KeyPartNames> KeypartsBaseWeight = new HashSet<KeyPartNames>
+        {
+            KeyPartNames.bottom_edge_l1,
+            KeyPartNames.bottom_edge_l2,
+            KeyPartNames.bottom_edge_l3,
+            KeyPartNames.bottom_edge_l4,
+            KeyPartNames.bottom_edge_left,
+            KeyPartNames.bottom_edge_r1,
+            KeyPartNames.bottom_edge_r2,
+            KeyPartNames.bottom_edge_r3,
+            KeyPartNames.bottom_edge_r4,
+            KeyPartNames.bottom_edge_right,
+            KeyPartNames.top_edge_l1,
+            KeyPartNames.top_edge_l2,
+            KeyPartNames.top_edge_l3,
+            KeyPartNames.top_edge_l4,
+            KeyPartNames.top_edge_left,
+            KeyPartNames.top_edege_r1,
+            KeyPartNames.top_edge_r2,
+            KeyPartNames.top_edge_r3,
+            KeyPartNames.top_edge_r4,
+            KeyPartNames.top_edge_right,
+            KeyPartNames.Frame
+        };
 
-        static int RayCastSize_X = 1;
-        static int RayCastSize_Y = 1;
-        static int RayCastSize_Z = 5;
-
-
-    }
-
+    
 }
