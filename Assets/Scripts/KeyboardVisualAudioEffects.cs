@@ -78,7 +78,6 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
     
             Color  assigned_color=AssignKeypartColort(KeyboardConfig.startColor, KeyboardConfig.endColor, keypart.ColorThumbHover);
             keypart.ChangeColorBasedOnWeight(assigned_color);
-            print((keypart.parentKey.keyName.ToString()+" : "+ keypart.keypartWeight));
         }
 
      else if (RayCastHandle.Equals(KeyboardConfig.RayCast.RAYCASTEXIT))

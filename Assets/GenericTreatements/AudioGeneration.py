@@ -36,3 +36,4 @@ key_sounds = generate_and_save_sounds(click_sound_path)
 print("Generated click-based sounds with modified pitch:")
 for char, path in key_sounds.items():
     print(f"{char}: {path}")
+

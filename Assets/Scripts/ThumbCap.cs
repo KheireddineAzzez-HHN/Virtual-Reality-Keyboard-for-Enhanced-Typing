@@ -1,4 +1,4 @@
-using System.Collections;
+
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -12,11 +12,12 @@ public class ThumbCap : MonoBehaviour
     public static event Action<keyPart, KeyboardConfig.RayCast> onRayCastKeypart;
     private BoxCollider boxCollider;
 
+     
     private bool lastPartsCleared = false;
     private void Start()
     {
         boxCollider = gameObject.GetComponent<BoxCollider>();
-        RaycastBox = new Vector3(boxCollider.size.x *10 , boxCollider.size.y*10 , boxCollider.size.z *100);
+        RaycastBox = new Vector3(boxCollider.size.x * MathF.Pow(10,-2), boxCollider.size.y*MathF.Pow(10, -2), boxCollider.size.z* MathF.Pow(10, -2));
     }
 
     void Update()
@@ -27,10 +28,10 @@ public class ThumbCap : MonoBehaviour
 
             lastPartsCleared = false;
         }
-       else if (Keyboard.Keydetected && !lastPartsCleared)
+        else if (Keyboard.Keydetected && !lastPartsCleared)
         {
 
-            foreach(keyPart keypart in lastKeyParts)
+            foreach (keyPart keypart in lastKeyParts)
             {
 
                 onRayCastKeypart?.Invoke(keypart, KeyboardConfig.RayCast.RAYCASTEXIT);
@@ -45,7 +46,7 @@ public class ThumbCap : MonoBehaviour
 
     private void DetectKeyPartsCovered()
     {
-        Vector3 boxCenter = transform.TransformPoint(boxCollider.center + new Vector3(0, 0, boxCollider.size.z));
+        Vector3 boxCenter = transform.TransformPoint(boxCollider.center );
 
         // Get all colliders within the box
         Collider[] hitColliders = Physics.OverlapBox(boxCenter, RaycastBox * 0.5f, transform.rotation, keyPartLayerMask);

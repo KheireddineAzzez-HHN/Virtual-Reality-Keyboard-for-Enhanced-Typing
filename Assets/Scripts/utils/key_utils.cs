@@ -81,11 +81,15 @@ public class key_utils : MonoBehaviour
         return 1 - (distance / maxDistance);
     }
 
-    public static string Extrat_keyName(KeyboardConfig.KeyNames keyname)
+    public static String Extrat_keyName(KeyboardConfig.KeyNames keyname)
     {
-        return keyname.ToString().Split("_")[1];
+    string Extrated_keyName = keyname.ToString().Split("_")[1];
 
+    
+        return Extrated_keyName;
     }
+    
+
 
     public static bool IsAlphabetic(string input)
     {

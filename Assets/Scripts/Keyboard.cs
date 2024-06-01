@@ -13,8 +13,6 @@ public class Keyboard : MonoBehaviour
 
     private Dictionary<key, int> activeKeyCollisionsRayCast = new Dictionary<key, int>();
 
-
-
     public key keyToType = null;
     public bool animationtriggered = false;
     public static bool Keydetected = false;
@@ -24,7 +22,8 @@ public class Keyboard : MonoBehaviour
     public static event Action<key, KeyboardConfig.keyStatus> OnKeyTypevisualEffect;
 
     public static event Action<key, KeyboardConfig.keyStatus> OnKeyTypeAduioEffect;
-
+    public static event Action<string> OnNewWordTyped;
+    public Queue<string> typedKeysQueue = new Queue<string>();
 
 
 
@@ -63,6 +62,25 @@ public class Keyboard : MonoBehaviour
 
             keyToType.animationControl.PressKey();
             Keydetected = true;
+
+
+
+            // Add typed letter to queue
+            string typedLetter = keyToType.extractedKeyName;
+            if(typedLetter == "space")
+            {
+                typedLetter = " ";
+            }
+            typedKeysQueue.Enqueue(typedLetter);
+
+            // Check if the typed letter is a space
+            if (typedLetter == " ")
+            {
+                // Trigger the new word typed event
+                string word = GetWordFromQueue();
+                OnNewWordTyped?.Invoke(word);
+                
+            }
 
         }
     }
@@ -163,7 +181,11 @@ public class Keyboard : MonoBehaviour
         return false;
     }
 
+    private string GetWordFromQueue()
+    {
+        string word = string.Concat(typedKeysQueue.ToArray()).Trim();
+        typedKeysQueue.Clear();
+        return word;
+    }
 
-
- 
 }
