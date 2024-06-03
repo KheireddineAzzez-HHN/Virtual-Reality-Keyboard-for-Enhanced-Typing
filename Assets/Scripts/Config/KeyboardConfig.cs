@@ -9,7 +9,7 @@ public class KeyboardConfig : MonoBehaviour
     public static int rows = 10;
     public static string keyAudioPath = "audio/";
     public static float basicWeightKeypart = 0.1f;
-    public static Color startColor = Color.magenta;
+    public static Color startColor = Color.blue;
     public static Color endColor = new Color(0.5f, 0, 0.5f);
     public static float keyPatNormalWeightColorMultplicator = 1f;
     public static float keyPartBaseWeightColorMultiplicator = 7f;

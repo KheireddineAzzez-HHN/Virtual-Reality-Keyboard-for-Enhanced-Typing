@@ -11,7 +11,7 @@ public class ThumbCap : MonoBehaviour
     private List<keyPart> lastKeyParts = new List<keyPart>();
     public static event Action<keyPart, KeyboardConfig.RayCast> onRayCastKeypart;
     private BoxCollider boxCollider;
-
+    public float rayCastLength = 0.5f;
      
     private bool lastPartsCleared = false;
     private void Start()
@@ -49,7 +49,7 @@ public class ThumbCap : MonoBehaviour
         Vector3 boxCenter = transform.TransformPoint(boxCollider.center );
 
         // Get all colliders within the box
-        Collider[] hitColliders = Physics.OverlapBox(boxCenter, RaycastBox * 0.5f, transform.rotation, keyPartLayerMask);
+        Collider[] hitColliders = Physics.OverlapBox(boxCenter, RaycastBox * rayCastLength, transform.rotation, keyPartLayerMask);
 
         List<keyPart> hitKeyParts = new List<keyPart>();
 
