@@ -9,12 +9,43 @@ public class MongoDBUtility : MonoBehaviour
     private IMongoDatabase database;
     private IMongoCollection<BsonDocument> collection;
 
-     private string connectionString = "mongodb+srv://unityLab:UFoHeI10inPOUUPs@unitycluster.jtjndx8.mongodb.net/?retryWrites=true&w=majority&appName=UnityCluster";
+    private static MongoDBUtility _instance;
+    public static MongoDBUtility Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<MongoDBUtility>();
+
+                if (_instance == null)
+                {
+                    GameObject singletonObject = new GameObject();
+                    _instance = singletonObject.AddComponent<MongoDBUtility>();
+                    singletonObject.name = typeof(MongoDBUtility).ToString() + " (Singleton)";
+                }
+            }
+
+            return _instance;
+        }
+    }
+
+    private string connectionString = "mongodb+srv://unityLab:UFoHeI10inPOUUPs@unitycluster.jtjndx8.mongodb.net/?retryWrites=true&w=majority&appName=UnityCluster";
     [SerializeField] public string databaseName;
     [SerializeField] public string collectionName;
-    void Start()
+
+    private void Awake()
     {
-        ConnectToMongoDB();
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+            ConnectToMongoDB();
+        }
+        else if (_instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void ConnectToMongoDB()
@@ -25,7 +56,7 @@ public class MongoDBUtility : MonoBehaviour
         Debug.Log("Connected to MongoDB");
     }
 
-    public void InsertTypingData(TypingController.TypingData data)
+    public void InsertTypingData(TypingData data)
     {
         BsonDocument document = new BsonDocument
         {
@@ -39,10 +70,30 @@ public class MongoDBUtility : MonoBehaviour
             { "accuracyInKeystrokes", data.accuracyInKeystrokes },
             { "typingSpeed", data.typingSpeed },
             { "keystrokesPerCharacter", data.keystrokesPerCharacter },
-            { "sessionTime", data.sessionTime }
+            { "sessionTime", data.sessionTime },
+            { "userId", data.userId }
+
         };
 
         collection.InsertOne(document);
         Debug.Log("Typing data inserted into MongoDB");
+    }
+
+    public void UpdateCollectionName(string newCollectionName)
+    {
+
+        if (collectionName == newCollectionName)
+        {
+            Debug.Log("The collectionName has been already seted ");
+        }
+        else
+        {
+
+     
+        collectionName = newCollectionName;
+        collection = database.GetCollection<BsonDocument>(collectionName);
+        Debug.Log($"Collection name updated to {newCollectionName}");
+
+        }
     }
 }

@@ -56,6 +56,8 @@ public class TypingController : MonoBehaviour
 
         previousInput = input;
     }
+
+
         public void ClearText()
     {
         myInputField.text = "";
@@ -65,8 +67,6 @@ public class TypingController : MonoBehaviour
             lastEntry.timeTaken = Time.time - startTime;
             typingData[typingData.Count - 1] = lastEntry;
         }
-        // Reset the start time for a new phrase
-        startTime = Time.time;
     }
     public int CountWords(string input)
     {
@@ -93,7 +93,10 @@ public class TypingController : MonoBehaviour
                 accuracyInKeystrokes = TypingMetrics.CalculateAccuracyInKeystrokes(incorrectKeystrokes, keystrokeCount),
                 typingSpeed = TypingMetrics.CalculateTypingSpeed(typedText, timeTaken),
                 keystrokesPerCharacter = TypingMetrics.CalculateKeystrokesPerCharacter(keystrokeCount, typedText.Length),
-                sessionTime = DateTime.Now
+                sessionTime = DateTime.Now,
+                userId = userId
+
+
             };
 
             typingData.Add(data);
@@ -102,22 +105,7 @@ public class TypingController : MonoBehaviour
 
         myInputField.text = "";
         previousInput = "";
-        startTime = Time.time; // Reset the start time for a new phrase
+        // Reset the start time for a new phrase
     }
 
-    [System.Serializable]
-    public class TypingData
-    {
-        public string expected;
-        public string typed;
-        public float timeTaken;
-        public int keystrokeCount;
-        public float errorRate;
-        public float accuracyInCharacters;
-        public float accuracyInWords;
-        public float accuracyInKeystrokes;
-        public float typingSpeed;
-        public int keystrokesPerCharacter;
-        public DateTime sessionTime;
-    }
 }

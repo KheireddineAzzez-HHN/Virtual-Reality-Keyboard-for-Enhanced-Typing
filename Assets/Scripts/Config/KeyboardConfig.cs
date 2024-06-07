@@ -32,6 +32,13 @@ public class KeyboardConfig : MonoBehaviour
         REALESED
 
     }
+
+    public enum env_data_collection
+    {
+
+        Test,
+        Prod
+    }
     public enum KeyNames
     {
         KEY_0,

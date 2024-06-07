@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
-    public  TypingManager typingManager ;
+    public TypingManager typingManager;
     [SerializeField]
     private string nextSceneName;
 
@@ -14,10 +14,33 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded; // Register the event
         }
         else
         {
             Destroy(gameObject);
+        }
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded; // Unregister the event
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Check the environment type and update the collection name
+        currentEnv envComponent = FindObjectOfType<currentEnv>();
+        if (envComponent != null)
+        {
+            if (envComponent.ENV == KeyboardConfig.env_data_collection.Prod)
+            {
+                MongoDBUtility.Instance.UpdateCollectionName("Prod");
+            }
+            else if (envComponent.ENV == KeyboardConfig.env_data_collection.Test)
+            {
+                MongoDBUtility.Instance.UpdateCollectionName("Test");
+            }
         }
     }
 
@@ -35,5 +58,11 @@ public class GameManager : MonoBehaviour
     {
         get { return nextSceneName; }
         set { nextSceneName = value; }
+    }
+
+    public currentEnv env_type()
+    {
+        currentEnv envComponent = FindObjectOfType<currentEnv>();
+        return envComponent;
     }
 }

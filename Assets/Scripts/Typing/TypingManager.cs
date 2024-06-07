@@ -14,17 +14,36 @@ public class TypingManager : MonoBehaviour
     private TMP_Text displayText;
     [SerializeField]
     private Button nextPhraseButton;
+    [SerializeField] 
+    public int totalPhrases = 10;
 
+    private string userId;
+    private string Wainting_message = "Please click on the button to display the next phrase";
+
+    private currentEnv currentEnv;
     private void OnEnable()
     {
         phraseLoader.OnPhrasesLoaded += InitializeTypingTest;
+        currentEnv = GameManager.Instance.env_type();
+        if (currentEnv.ENV == KeyboardConfig.env_data_collection.Prod) { 
+        userId = Guid.NewGuid().ToString();
+        }
+        else
+        {
+            userId = "Test";
 
+        }
     }
     void Start()
     {
-        // Subscribe to the event to know when phrases are loaded
     }
+    public void wainting_Next_phrase()
+    {
+        typingController.myInputField.DeactivateInputField();
+        displayText.text = Wainting_message;
 
+
+    }
     private void InitializeTypingTest()
     {
         // Load the first phrase after phrases are loaded
@@ -38,6 +57,8 @@ public class TypingManager : MonoBehaviour
         Phrase phrase = phraseLoader.GetRandomPhrase();
         if (phrase != null)
         {
+            typingController.myInputField.ActivateInputField();
+
             string typedText = typingController.myInputField.text;
             displayText.text = phrase.Text;
             nextPhraseButton.interactable = false;
@@ -58,8 +79,10 @@ public class TypingManager : MonoBehaviour
         if (finishing_Status)
         {
             typingController.RecordTypingData(displayText.text);
-
+            wainting_Next_phrase();
             nextPhraseButton.interactable = finishing_Status;
+            
+
 
         }
     }
