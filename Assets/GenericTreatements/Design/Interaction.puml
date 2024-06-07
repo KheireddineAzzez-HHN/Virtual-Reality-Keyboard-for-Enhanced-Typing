@@ -1,0 +1,39 @@
+@startuml
+actor User
+participant "keyPart" as KP
+participant "key" as K
+participant "Keyboard" as KB
+
+== Collision Detection ==
+User -> KP : Presses KeyPart
+KP -> K : DetectCollision()
+activate K
+K -> KB : NotifyCollision()
+activate KB
+
+== Event Notification ==
+KP -> K : TriggerEvent()
+K -> KB : NotifyKeyPartStatus()
+deactivate K
+
+== Register collided key ==
+K -> KB : RegisterKey()
+
+== Weight Calculation ==
+loop Periodic Check
+    KB -> K : CalculateKeyWeight()
+    K -> K : AggregateWeight()
+end
+KB -> KB : IdentifyHighestWeightKey()
+
+== Key Press Detection ==
+KB -> KB : DetectKeyPress()
+KB -> User : DisplayKeyPress()
+
+== Key Typed ==
+KP -> K : CollisionEnds()
+K -> KB : NotifyEndCollision()
+KB -> User : ConfirmKeyTyped()
+deactivate KB
+
+@enduml

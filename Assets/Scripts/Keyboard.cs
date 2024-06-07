@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 public class Keyboard : MonoBehaviour
 {
 
@@ -17,18 +18,29 @@ public class Keyboard : MonoBehaviour
     public bool animationtriggered = false;
     public static bool Keydetected = false;
 
-    private KeyboardVisualAudioEffects keyboardEffects = new KeyboardVisualAudioEffects();
+    public TMP_InputField inputText;
 
     public static event Action<key, KeyboardConfig.keyStatus> OnKeyTypevisualEffect;
 
     public static event Action<key, KeyboardConfig.keyStatus> OnKeyTypeAduioEffect;
-    public static event Action<string> OnNewWordTyped;
+
+    
     public Queue<string> typedKeysQueue = new Queue<string>();
 
 
 
 
+    public void instert_key_to_InputText(string text)
+    {
+        if(text.Equals(null) || text.Equals(""))
+        {
+            Debug.LogError("Verify text is cloud not be empty or null");
+        }
 
+        inputText.text = inputText + text;
+
+
+    }
 
     private void Awake()
     {
@@ -66,21 +78,9 @@ public class Keyboard : MonoBehaviour
 
 
             // Add typed letter to queue
-            string typedLetter = keyToType.extractedKeyName;
-            if(typedLetter == "space")
-            {
-                typedLetter = " ";
-            }
-            typedKeysQueue.Enqueue(typedLetter);
+  
 
-            // Check if the typed letter is a space
-            if (typedLetter == " ")
-            {
-                // Trigger the new word typed event
-                string word = GetWordFromQueue();
-                OnNewWordTyped?.Invoke(word);
-                
-            }
+    
 
         }
     }
@@ -88,6 +88,14 @@ public class Keyboard : MonoBehaviour
     private void handleExistCollision_Keys() {
 
         OnKeyTypevisualEffect.Invoke(keyToType, KeyboardConfig.keyStatus.REALESED);
+
+        string typedLetter = keyToType.extractedKeyName;
+
+        if (typedLetter == "space")
+        {
+            typedLetter = " ";
+        }
+        instert_key_to_InputText(typedLetter);
         print(keyToType.extractedKeyName);
 
     }
@@ -172,10 +180,15 @@ public class Keyboard : MonoBehaviour
     {
         if (activeKeyCollisions.Count > 0)
         {
-
+           foreach(key element in activeKeyCollisions.Keys)
+            {
+                element.keyWeigh = 0;
+            }
             activeKeyCollisions.Clear();
             keyToType = null;
             Keydetected = false;
+           
+            
             return true;
         }
         return false;

@@ -11,7 +11,7 @@ public class ThumbCap : MonoBehaviour
     private List<keyPart> lastKeyParts = new List<keyPart>();
     public static event Action<keyPart, KeyboardConfig.RayCast> onRayCastKeypart;
     private BoxCollider boxCollider;
-    public float rayCastLength = 0.5f;
+    public float rayCastLength =1f;
      
     private bool lastPartsCleared = false;
     private void Start()
