@@ -15,7 +15,7 @@ public class TypingController : MonoBehaviour
     private int incorrectKeystrokes;
     public string previousInput;
     private MongoDBUtility mongoDBUtility;
-
+    public int currentPhrase;
     void OnEnable()
     {
         mongoDBUtility = FindObjectOfType<MongoDBUtility>(); 
@@ -73,7 +73,7 @@ public class TypingController : MonoBehaviour
         return !string.IsNullOrEmpty(input) ? input.Split(new char[] { ' ', '\n', '\t' }, StringSplitOptions.RemoveEmptyEntries).Length : 0;
     }
 
-    public void RecordTypingData(string expected)
+    public TypingData RecordTypingData(string expected)
     {
         if (!string.IsNullOrEmpty(myInputField.text))
         {
@@ -94,18 +94,21 @@ public class TypingController : MonoBehaviour
                 typingSpeed = TypingMetrics.CalculateTypingSpeed(typedText, timeTaken),
                 keystrokesPerCharacter = TypingMetrics.CalculateKeystrokesPerCharacter(keystrokeCount, typedText.Length),
                 sessionTime = DateTime.Now,
-                userId = userId
+
 
 
             };
+            myInputField.text = "";
+            previousInput = "";
 
             typingData.Add(data);
-            mongoDBUtility.InsertTypingData(data); // Insert data into MongoDB
-        }
 
-        myInputField.text = "";
-        previousInput = "";
-        // Reset the start time for a new phrase
+            return data;
+        }
+        return null;
+
+
+      
     }
 
 }

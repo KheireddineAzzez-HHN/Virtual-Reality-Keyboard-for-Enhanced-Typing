@@ -4,10 +4,8 @@ using UnityEngine;
 using System;
 
 [System.Serializable]
-public class TypingData 
+public class TypingData
 {
-
-
     public string expected;
     public string typed;
     public float timeTaken;
@@ -19,7 +17,7 @@ public class TypingData
     public float typingSpeed;
     public int keystrokesPerCharacter;
     public DateTime sessionTime;
-
+    public int currentPhrase;
     public string userId;
-
+    public string KeyboardType; 
 }

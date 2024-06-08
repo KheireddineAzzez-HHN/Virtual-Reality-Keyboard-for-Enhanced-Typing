@@ -1,11 +1,13 @@
-[System.Serializable]
 
+using System;
+
+[System.Serializable]
 public class Phrase
 {
     public string Text;
 
     public Phrase(string text)
     {
-        Text = text+".";
+        Text = text.ToLower()+".";
     }
 }

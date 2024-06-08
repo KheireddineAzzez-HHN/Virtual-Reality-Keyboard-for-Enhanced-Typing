@@ -5,8 +5,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public TypingManager typingManager;
+
+    public UserData UserData { get; set; }
+    public string KeyboardType { get; set; } // Add KeyboardType
+
     [SerializeField]
     private string nextSceneName;
+    public ConfigManager configManager;
 
     void Awake()
     {
@@ -15,6 +20,9 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded; // Register the event
+
+            InitializeConfig();
+
         }
         else
         {
@@ -30,18 +38,55 @@ public class GameManager : MonoBehaviour
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         // Check the environment type and update the collection name
-        currentEnv envComponent = FindObjectOfType<currentEnv>();
+        current_Scene_Env envComponent = FindObjectOfType<current_Scene_Env>();
         if (envComponent != null)
         {
-            if (envComponent.ENV == KeyboardConfig.env_data_collection.Prod)
+            if (envComponent.Scene_Type == KeyboardConfig.env_data_collection.Prod)
             {
                 MongoDBUtility.Instance.UpdateCollectionName("Prod");
             }
-            else if (envComponent.ENV == KeyboardConfig.env_data_collection.Test)
+            else if (envComponent.Scene_Type == KeyboardConfig.env_data_collection.Test)
             {
                 MongoDBUtility.Instance.UpdateCollectionName("Test");
             }
         }
+    }
+
+    private async void InitializeConfig()
+    {
+        GlobalConfig config = await configManager.LoadGlobalConfig();
+        if (config != null)
+        {
+            KeyboardType = config.KeyboardType;
+            if (KeyboardType == "Controllers_With_Keyboard")
+            {
+                configManager.ApplyControllerKeyboardConfig(config.ControllerKeyboard);
+            }
+            else if (KeyboardType == "Gloves_With_Keyboard")
+            {
+                configManager.ApplyGlovesConfig(config.Gloves);
+            }
+        }
+    }
+
+    private void HandleControllersKeyboardConfig(ControllerKeyboardConfig config)
+    {
+        // Implement special treatment for Controllers_Keyboard here
+        Debug.Log("Handling Controllers_Keyboard configuration");
+        Debug.Log($"VibrationLevel: {config.VibrationLevel}");
+        // Apply the VibrationLevel to the appropriate system
+    }
+
+    private void HandleGlovesConfig(GlovesConfig config)
+    {
+        // Implement special treatment for Gloves configuration here
+        Debug.Log("Handling Gloves configuration");
+        Debug.Log($"BuzzThumb: {config.BuzzThumb}");
+        Debug.Log($"ForceFeedbackThumb: {config.ForceFeedbackThumb}");
+        Debug.Log($"ForceFeedbackIndex: {config.ForceFeedbackIndex}");
+        Debug.Log($"ForceFeedbackMiddle: {config.ForceFeedbackMiddle}");
+        Debug.Log($"ForceFeedbackRing: {config.ForceFeedbackRing}");
+        Debug.Log($"ForceFeedbackPinky: {config.ForceFeedbackPinky}");
     }
 
     public void ChangeScene(string sceneName)
@@ -54,15 +99,8 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(nextSceneName);
     }
 
-    public string NextSceneName
+    public current_Scene_Env GetCurrentEnv()
     {
-        get { return nextSceneName; }
-        set { nextSceneName = value; }
-    }
-
-    public currentEnv env_type()
-    {
-        currentEnv envComponent = FindObjectOfType<currentEnv>();
-        return envComponent;
+        return FindObjectOfType<current_Scene_Env>();
     }
 }

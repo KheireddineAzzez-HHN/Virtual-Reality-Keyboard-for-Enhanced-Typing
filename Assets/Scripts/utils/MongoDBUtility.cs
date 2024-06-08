@@ -2,12 +2,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using MongoDB.Bson;
 using MongoDB.Driver;
+using System;
+using System.Threading.Tasks;
 
 public class MongoDBUtility : MonoBehaviour
 {
     private MongoClient client;
     private IMongoDatabase database;
     private IMongoCollection<BsonDocument> collection;
+    [SerializeField] private string usersCollectionName = "Users";
+    private IMongoCollection<BsonDocument> usersCollection;
 
     private static MongoDBUtility _instance;
     public static MongoDBUtility Instance
@@ -54,6 +58,8 @@ public class MongoDBUtility : MonoBehaviour
         database = client.GetDatabase(databaseName);
         collection = database.GetCollection<BsonDocument>(collectionName);
         Debug.Log("Connected to MongoDB");
+        usersCollection = database.GetCollection<BsonDocument>(usersCollectionName);
+
     }
 
     public void InsertTypingData(TypingData data)
@@ -95,5 +101,68 @@ public class MongoDBUtility : MonoBehaviour
         Debug.Log($"Collection name updated to {newCollectionName}");
 
         }
+    }
+
+
+    public async Task<GlobalConfig> FetchGlobalConfig()
+    {
+        var result = await collection.Find(new BsonDocument()).FirstOrDefaultAsync();
+
+        if (result != null)
+        {
+            var gloves = result["Gloves"].AsBsonDocument;
+            var controllerKeyboard = result["ControllerKeyboard"].AsBsonDocument;
+            var session = result["session"].AsBsonDocument;
+            var keyboardType = result["KeyboardType"].AsString; // Fetch KeyboardType
+
+            var glovesConfig = new GlovesConfig
+            {
+                BuzzThumb = (float)gloves["BuzzThumb"].AsDouble,
+                ForceFeedbackThumb = (float)gloves["ForceFeedbackThumb"].AsDouble,
+                ForceFeedbackIndex = (float)gloves["ForceFeedbackIndex"].AsDouble,
+                ForceFeedbackMiddle = (float)gloves["ForceFeedbackMiddle"].AsDouble,
+                ForceFeedbackRing = (float)gloves["ForceFeedbackRing"].AsDouble,
+                ForceFeedbackPinky = (float)gloves["ForceFeedbackPinky"].AsDouble
+            };
+
+            var controllerKeyboardConfig = new ControllerKeyboardConfig
+            {
+                VibrationLevel = (float)controllerKeyboard["VibrationLevel"].AsDouble
+            };
+
+            var sessionConfig = new SessionConfig
+            {
+                PhraseToTypeRealTest = session["PhraseToTypeRealTest"].AsInt32,
+                PhraseToTypeFakeTest = session["PhraseToTypeFakeTest"].AsInt32
+            };
+
+            return new GlobalConfig
+            {
+                Gloves = glovesConfig,
+                ControllerKeyboard = controllerKeyboardConfig,
+                Session = sessionConfig,
+                KeyboardType = keyboardType // Set KeyboardType
+            };
+        }
+        else
+        {
+            Debug.LogError("No global config found in the collection: " + collectionName);
+            return null;
+        }
+    }
+
+    public void InsertUserData(UserData userData)
+    {
+
+        BsonDocument document = new BsonDocument
+        {
+            { "userId", userData.userId },
+            { "userName", userData.userName },
+            { "userAge", userData.userAge },
+            { "userSex", userData.userSex }
+        };
+
+        usersCollection.InsertOne(document);
+        Debug.Log("User data inserted into MongoDB");
     }
 }

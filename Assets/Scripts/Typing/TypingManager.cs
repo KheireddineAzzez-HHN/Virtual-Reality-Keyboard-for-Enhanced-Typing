@@ -6,26 +6,24 @@ using UnityEngine.UI;
 using System;
 public class TypingManager : MonoBehaviour
 {
-    [SerializeField]
-    public TypingController typingController;
-    [SerializeField]
-    public  PhraseLoader phraseLoader;
-    [SerializeField]
-    private TMP_Text displayText;
-    [SerializeField]
-    private Button nextPhraseButton;
-    [SerializeField] 
-    public int totalPhrases = 10;
+    [SerializeField] private TypingController typingController;
+    [SerializeField] private PhraseLoader phraseLoader;
+    [SerializeField] private TMP_Text displayText;
+    [SerializeField] private Button nextPhraseButton;
+    [SerializeField] private TMP_Text phraseCounterText;
+
+    [SerializeField] private int totalPhrases = 10;
+    private int phrasesTyped = 0;
 
     private string userId;
     private string Wainting_message = "Please click on the button to display the next phrase";
 
-    private currentEnv currentEnv;
+    private current_Scene_Env currentEnv;
     private void OnEnable()
     {
         phraseLoader.OnPhrasesLoaded += InitializeTypingTest;
-        currentEnv = GameManager.Instance.env_type();
-        if (currentEnv.ENV == KeyboardConfig.env_data_collection.Prod) { 
+        currentEnv = GameManager.Instance.GetCurrentEnv();
+        if (currentEnv.Scene_Type == KeyboardConfig.env_data_collection.Prod) { 
         userId = Guid.NewGuid().ToString();
         }
         else
@@ -54,6 +52,12 @@ public class TypingManager : MonoBehaviour
 
     private void LoadNewPhrase()
     {
+
+        if (phrasesTyped >= totalPhrases)
+        {
+            EndTest();
+            return;
+        }
         Phrase phrase = phraseLoader.GetRandomPhrase();
         if (phrase != null)
         {
@@ -62,7 +66,9 @@ public class TypingManager : MonoBehaviour
             string typedText = typingController.myInputField.text;
             displayText.text = phrase.Text;
             nextPhraseButton.interactable = false;
-            typingController.ClearText(); 
+            typingController.ClearText();
+            phrasesTyped++;
+            UpdatePhraseCounter();
         }
     }
 
@@ -78,7 +84,13 @@ public class TypingManager : MonoBehaviour
 
         if (finishing_Status)
         {
-            typingController.RecordTypingData(displayText.text);
+
+            TypingData data= typingController.RecordTypingData(displayText.text);
+            data.userId = GameManager.Instance.UserData.userId;
+            data.currentPhrase = phrasesTyped;
+            data.KeyboardType = GameManager.Instance.KeyboardType;
+            MongoDBUtility.Instance.InsertTypingData(data);
+
             wainting_Next_phrase();
             nextPhraseButton.interactable = finishing_Status;
             
@@ -86,7 +98,10 @@ public class TypingManager : MonoBehaviour
 
         }
     }
-
+    private void UpdatePhraseCounter()
+    {
+        phraseCounterText.text = $"{totalPhrases - phrasesTyped}";
+    }
     public void NextPhraseButtonClicked()
     {
 
@@ -104,4 +119,10 @@ public class TypingManager : MonoBehaviour
             phraseLoader.OnPhrasesLoaded -= InitializeTypingTest;
         }
     }
+
+    private void EndTest()
+    {
+        Debug.Log("Test completed!");
+    }
+
 }
