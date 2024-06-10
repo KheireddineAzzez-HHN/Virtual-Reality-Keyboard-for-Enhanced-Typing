@@ -57,14 +57,14 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
 
     private void HandleKeyPresss(key key) {
 
-        key.animationControl.PressKey();
+        key.animationControl.PressKey(key.keyName);
         key.keyaudio.PlaySoundByPath(key.keySoundPath);
     
     }
     private void HandleKeyRelease(key key)
     {
 
-        key.animationControl.ReleaseKey();
+        key.animationControl.ReleaseKey(key.keyName);
 
     }
 

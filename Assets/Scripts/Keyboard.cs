@@ -29,7 +29,6 @@ public class Keyboard : MonoBehaviour
 
 
 
-
     public void instert_key_to_InputText(string text)
     {
         if(text.Equals(null) || text.Equals(""))
@@ -37,7 +36,7 @@ public class Keyboard : MonoBehaviour
             Debug.LogError("Verify text is cloud not be empty or null");
         }
 
-        inputText.text = inputText + text;
+       inputText.text = inputText.text + text;
 
 
     }
@@ -72,7 +71,7 @@ public class Keyboard : MonoBehaviour
             keyToType = highestWeigh_Key();
             OnKeyTypevisualEffect.Invoke(keyToType, KeyboardConfig.keyStatus.PRESSED);
 
-            keyToType.animationControl.PressKey();
+            keyToType.animationControl.PressKey(keyToType.keyName);
             Keydetected = true;
 
 
@@ -95,8 +94,24 @@ public class Keyboard : MonoBehaviour
         {
             typedLetter = " ";
         }
+        else if (typedLetter == "point"){
+
+            typedLetter = ".";
+        }
+        else if (typedLetter == "delete")
+        {
+
+            if (inputText.text.Length > 0)
+            {
+                inputText.text = inputText.text.Substring(0, inputText.text.Length - 1);
+                return;
+            }
+
+        }
+
+
         instert_key_to_InputText(typedLetter);
-        print(keyToType.extractedKeyName);
+        print(typedLetter);
 
     }
 

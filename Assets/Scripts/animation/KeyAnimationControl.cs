@@ -12,14 +12,35 @@ public class KeyAnimationControl : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void PressKey()
+    public void PressKey(KeyboardConfig.KeyNames keyname)
     {
-        animator.Play("Press Down");
+        if (keyname == KeyboardConfig.KeyNames.key_space)
+        {
+
+            animator.Play("KeySpace_Release");
+
+        }
+        else
+        {
+            animator.Play("Press Down");
+
+        }
     }
 
-    public void ReleaseKey()
+    public void ReleaseKey(KeyboardConfig.KeyNames keyname)
     {
-        animator.Play("Release");
+        if (keyname == KeyboardConfig.KeyNames.key_space)
+        {
+
+            animator.Play("KeySpace_Press");
+
+        }
+        else
+        {
+
+            animator.Play("Release");
+
+        }
     }
 
     public bool IsAnimating()

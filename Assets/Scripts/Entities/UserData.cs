@@ -43,5 +43,7 @@ public class GlobalConfig
     public GlovesConfig Gloves { get; set; }
     public ControllerKeyboardConfig ControllerKeyboard { get; set; }
     public SessionConfig Session { get; set; }
-    public string KeyboardType { get; set; } // Add KeyboardType
+    public List<string> KeyboardTypes { get; set; }
+    public int WaitingDuration { get; set; }  
+
 }

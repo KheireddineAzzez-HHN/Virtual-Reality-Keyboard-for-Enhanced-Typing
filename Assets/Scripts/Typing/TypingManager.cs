@@ -12,29 +12,28 @@ public class TypingManager : MonoBehaviour
     [SerializeField] private Button nextPhraseButton;
     [SerializeField] private TMP_Text phraseCounterText;
 
-    [SerializeField] private int totalPhrases = 10;
+    [SerializeField] private int totalPhrases = 0;
+
     private int phrasesTyped = 0;
 
     private string userId;
     private string Wainting_message = "Please click on the button to display the next phrase";
 
     private current_Scene_Env currentEnv;
+
     private void OnEnable()
     {
-        phraseLoader.OnPhrasesLoaded += InitializeTypingTest;
-        currentEnv = GameManager.Instance.GetCurrentEnv();
-        if (currentEnv.Scene_Type == KeyboardConfig.env_data_collection.Prod) { 
-        userId = Guid.NewGuid().ToString();
-        }
-        else
-        {
-            userId = "Test";
 
-        }
+        phraseLoader.OnPhrasesLoaded += InitializeTypingTest;
+      
     }
     void Start()
     {
+
+        currentEnv = FindAnyObjectByType<current_Scene_Env>();
     }
+
+
     public void wainting_Next_phrase()
     {
         typingController.myInputField.DeactivateInputField();
@@ -45,6 +44,8 @@ public class TypingManager : MonoBehaviour
     private void InitializeTypingTest()
     {
         // Load the first phrase after phrases are loaded
+        this.totalPhrases = GameManager.Instance.GetCurrentEnv().phrases_to_type;
+
         LoadNewPhrase();
         typingController.OnWordCountChange += HandleWordCountChange;
         nextPhraseButton.onClick.AddListener(NextPhraseButtonClicked);
@@ -54,8 +55,9 @@ public class TypingManager : MonoBehaviour
     {
 
         if (phrasesTyped >= totalPhrases)
-        {
+        {    
             EndTest();
+            GameManager.Instance.CompleteCurrentPhase();
             return;
         }
         Phrase phrase = phraseLoader.GetRandomPhrase();
@@ -88,7 +90,8 @@ public class TypingManager : MonoBehaviour
             TypingData data= typingController.RecordTypingData(displayText.text);
             data.userId = GameManager.Instance.UserData.userId;
             data.currentPhrase = phrasesTyped;
-            data.KeyboardType = GameManager.Instance.KeyboardType;
+            data.KeyboardType = GameManager.Instance.CurrentKeyboardType;
+
             MongoDBUtility.Instance.InsertTypingData(data);
 
             wainting_Next_phrase();

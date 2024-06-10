@@ -13,6 +13,11 @@ public class KeyboardConfig : MonoBehaviour
     public static Color endColor = new Color(0.5f, 0, 0.5f);
     public static float keyPatNormalWeightColorMultplicator = 1f;
     public static float keyPartBaseWeightColorMultiplicator = 7f;
+    public enum KeyboardType
+    {
+        Controllers_With_Keyboard,
+        Gloves_With_keyboard,
+    }
 
     void Start()
     {
@@ -37,7 +42,9 @@ public class KeyboardConfig : MonoBehaviour
     {
 
         Test,
-        Prod
+        Prod,
+        USERCONFIG,
+            WAITING
     }
     public enum KeyNames
     {
