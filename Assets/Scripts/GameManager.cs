@@ -14,9 +14,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private string nextSceneName;
     public ConfigManager configManager;
+   
     private int keyboardTypeIndex;
-    public string CurrentKeyboardType { get; private set; }
-   public  current_Scene_Env envComponent;
+    public string CurrentKeyboardType;
+    public  current_Scene_Env envComponent;
     public static event Action TypingCompleted;
 
     void Awake()
@@ -25,6 +26,8 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            InitializeConfig();
+
             SceneManager.sceneLoaded += OnSceneLoaded; // Register the event
 
 
@@ -37,7 +40,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        InitializeConfig();
 
     }
     void OnDestroy()
@@ -84,6 +86,9 @@ public class GameManager : MonoBehaviour
                 envComponent.update_current_Scene_Env();
 
             }
+
+            UpdateKeyboardAppearance();
+
         }
     }
 
@@ -103,6 +108,8 @@ public class GameManager : MonoBehaviour
 
         }
         CurrentKeyboardType = keyboardTypes[keyboardTypeIndex];
+        UpdateKeyboardAppearance();
+
     }
 
 
@@ -117,6 +124,7 @@ public class GameManager : MonoBehaviour
             if (keyboardTypeIndex < keyboardTypes.Count)
             {
                 CurrentKeyboardType = keyboardTypes[keyboardTypeIndex];
+
 
                 sceneStackManager.LoadNextScene();
             }
@@ -158,4 +166,10 @@ public class GameManager : MonoBehaviour
     {
         return FindObjectOfType<current_Scene_Env>();
     }
+
+    private void UpdateKeyboardAppearance()
+    {
+        KeyboardAppearance.Instance.UpdateKeyboards(CurrentKeyboardType);
+    }
+
 }

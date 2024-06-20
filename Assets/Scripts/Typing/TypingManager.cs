@@ -13,6 +13,7 @@ public class TypingManager : MonoBehaviour
     [SerializeField] private TMP_Text phraseCounterText;
 
     [SerializeField] private int totalPhrases = 0;
+    private bool Finger_status = false;
 
     private int phrasesTyped = 0;
 
@@ -25,12 +26,17 @@ public class TypingManager : MonoBehaviour
     {
 
         phraseLoader.OnPhrasesLoaded += InitializeTypingTest;
-      
+        NextPhrase.IndexFinger += Check_Finger_INDEX_STATUS;
+
+
+
     }
     void Start()
     {
 
         currentEnv = FindAnyObjectByType<current_Scene_Env>();
+        nextPhraseButton.interactable = false;
+
     }
 
 
@@ -51,6 +57,16 @@ public class TypingManager : MonoBehaviour
         nextPhraseButton.onClick.AddListener(NextPhraseButtonClicked);
     }
 
+    public void Check_Finger_INDEX_STATUS(bool status)
+    {
+        this.Finger_status = status;
+        if (status)
+        {
+            this.nextPhraseButton.onClick.Invoke();
+
+        }
+        Finger_status = false;
+    }
     private void LoadNewPhrase()
     {
 
@@ -94,6 +110,8 @@ public class TypingManager : MonoBehaviour
 
             MongoDBUtility.Instance.InsertTypingData(data);
 
+            nextPhraseButton.interactable = true;
+
             wainting_Next_phrase();
             nextPhraseButton.interactable = finishing_Status;
             
@@ -127,5 +145,6 @@ public class TypingManager : MonoBehaviour
     {
         Debug.Log("Test completed!");
     }
+
 
 }

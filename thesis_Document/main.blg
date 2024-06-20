@@ -1,0 +1,122 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 29 items.
+A level-1 auxiliary file: Introduction/introdution.aux
+Reallocating 'name_of_file' (item size: 1) to 26 items.
+A level-1 auxiliary file: Background/Background.aux
+Reallocating 'name_of_file' (item size: 1) to 22 items.
+A level-1 auxiliary file: Approach/Approach.aux
+Reallocating 'name_of_file' (item size: 1) to 46 items.
+A level-1 auxiliary file: HapticImplementation/hapticImplementation.aux
+Reallocating 'name_of_file' (item size: 1) to 34 items.
+A level-1 auxiliary file: Development/HardwareSelection.aux
+Reallocating 'name_of_file' (item size: 1) to 27 items.
+A level-1 auxiliary file: Development/Conception.aux
+Reallocating 'name_of_file' (item size: 1) to 6 items.
+The style file: plain.bst
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+Database file #1: ref.bib
+Warning--entry type for "alba2023gpus" isn't style-file defined
+--line 28 of file ref.bib
+Warning--entry type for "bezmalinovic2022meta" isn't style-file defined
+--line 62 of file ref.bib
+Warning--entry type for "dasPneumatic" isn't style-file defined
+--line 98 of file ref.bib
+Warning--entry type for "directionalForce2019" isn't style-file defined
+--line 116 of file ref.bib
+Warning--entry type for "dube2019textentry" isn't style-file defined
+--line 124 of file ref.bib
+Warning--entry type for "dudley2019keyboard" isn't style-file defined
+--line 133 of file ref.bib
+Warning--entry type for "Fitts2004" isn't style-file defined
+--line 142 of file ref.bib
+Warning--entry type for "giovannelli2022visual" isn't style-file defined
+--line 150 of file ref.bib
+Warning--entry type for "Hannah2021" isn't style-file defined
+--line 173 of file ref.bib
+Warning--entry type for "hayward2022xr" isn't style-file defined
+--line 181 of file ref.bib
+Warning--entry type for "Kim2013" isn't style-file defined
+--line 231 of file ref.bib
+Warning--entry type for "kruger2018text" isn't style-file defined
+--line 240 of file ref.bib
+Warning--entry type for "Laricchia2024" isn't style-file defined
+--line 266 of file ref.bib
+Warning--entry type for "leng2022flower" isn't style-file defined
+--line 293 of file ref.bib
+Warning--entry type for "levenshteinWiki" isn't style-file defined
+--line 302 of file ref.bib
+Warning--entry type for "microsoft2022annual" isn't style-file defined
+--line 340 of file ref.bib
+Warning--entry type for "Muelaner2023" isn't style-file defined
+--line 357 of file ref.bib
+Warning--entry type for "presenceVr2021" isn't style-file defined
+--line 422 of file ref.bib
+Warning--entry type for "Productivity2014" isn't style-file defined
+--line 429 of file ref.bib
+Warning--entry type for "pseudoHaptics2022" isn't style-file defined
+--line 437 of file ref.bib
+Warning--entry type for "savitz2023apple" isn't style-file defined
+--line 464 of file ref.bib
+Warning--entry type for "senseglove_nova" isn't style-file defined
+--line 472 of file ref.bib
+Warning--entry type for "Staff2022" isn't style-file defined
+--line 553 of file ref.bib
+Warning--entry type for "T9" isn't style-file defined
+--line 580 of file ref.bib
+Warning--entry type for "teather2020flik" isn't style-file defined
+--line 585 of file ref.bib
+Warning--entry type for "xu2023haptic" isn't style-file defined
+--line 652 of file ref.bib
+Warning--entry type for "Ying2021" isn't style-file defined
+--line 667 of file ref.bib
+Warning--to sort, need author or key in senseglove_nova
+Warning--to sort, need author or key in pseudoHaptics2022
+Warning--to sort, need author or key in directionalForce2019
+Warning--to sort, need author or key in presenceVr2021
+Warning--to sort, need author or key in T9
+Warning--to sort, need author or key in Productivity2014
+Warning--to sort, need author or key in Fitts2004
+You've used 73 entries,
+            2118 wiz_defined-function locations,
+            854 strings with 12986 characters,
+and the built_in function-call counts, 17860 in all, are:
+= -- 1659
+> -- 698
+< -- 1
++ -- 291
+- -- 212
+* -- 980
+:= -- 2921
+add.period$ -- 185
+call.type$ -- 73
+change.case$ -- 310
+chr.to.int$ -- 0
+cite$ -- 80
+duplicate$ -- 672
+empty$ -- 1716
+format.name$ -- 212
+if$ -- 3825
+int.to.chr$ -- 0
+int.to.str$ -- 73
+missing$ -- 46
+newline$ -- 334
+num.names$ -- 132
+pop$ -- 517
+preamble$ -- 1
+purify$ -- 249
+quote$ -- 0
+skip$ -- 570
+stack$ -- 0
+substring$ -- 826
+swap$ -- 84
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 268
+warning$ -- 7
+while$ -- 161
+width$ -- 75
+write$ -- 681
+(There were 34 warnings)

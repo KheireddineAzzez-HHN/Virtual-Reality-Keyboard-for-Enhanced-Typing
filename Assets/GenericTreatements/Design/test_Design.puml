@@ -1,0 +1,122 @@
+@startuml
+
+title Typing Test Scenario Workflow
+
+|User|
+start
+:Start Test;
+
+|System|
+:Load Configuration;
+note right
+Configuration includes:
+- Keyboard Types: ["Keyboard with Gloves", "Keyboard With Controllers"]
+- Total Phrases per keyboard: 5
+- Waiting Duration: 300 seconds
+- Glove Vibration: 70%
+- Force Feedback: 50%
+end note
+
+|User|
+:Start Training for Keyboard 1 (QWERTY);
+|System|
+:Load 5 Training Phrases;
+
+repeat
+|User|
+:Type Training Phrase;
+|System|
+:Monitor Input;
+:Count Keystrokes;
+:Detect Mistakes;
+|User|
+:Complete Training Phrase;
+repeat while (phrases < 5)
+
+|System|
+:End Training Phase for Keyboard 1;
+
+|User|
+:Start Testing for Keyboard 1 (QWERTY);
+|System|
+:Load 5 Testing Phrases;
+
+repeat
+|User|
+:Type Testing Phrase;
+|System|
+:Monitor Input;
+:Count Keystrokes;
+:Detect Mistakes;
+|System|
+:Detect Completion;
+note right
+Completion detected by:
+- Correct word count
+- Ends with a period
+end note
+|User|
+:Complete Testing Phrase;
+:Record Data;
+
+repeat while (phrases < 5)
+
+|System|
+:End Testing Phase for Keyboard 1;
+
+|User|
+:Wait for Next Keyboard;
+|System|
+:Wait for 300 seconds;
+
+|User|
+:Start Training for Keyboard 2 (Keyboard With Controllers
+);
+|System|
+:Load 5 Training Phrases;
+
+repeat
+|User|
+:Type Training Phrase;
+|System|
+:Monitor Input;
+:Count Keystrokes;
+:Detect Mistakes;
+|User|
+:Complete Training Phrase;
+repeat while (phrases < 5)
+
+|System|
+:End Training Phase for Keyboard 2;
+
+|User|
+:Start Testing for Keyboard 2 (Keyboard With Controllers);
+|System|
+:Load 5 Testing Phrases;
+
+repeat
+|User|
+:Type Testing Phrase;
+|System|
+:Monitor Input;
+:Count Keystrokes;
+:Detect Mistakes;
+|System|
+:Detect Completion;
+
+|User|
+:Complete Testing Phrase;
+:Record Data;
+
+repeat while (phrases < 5)
+
+|System|
+:End Testing Phase for Keyboard 2;
+
+|User|
+:End Test;
+|System|
+
+stop
+
+@enduml

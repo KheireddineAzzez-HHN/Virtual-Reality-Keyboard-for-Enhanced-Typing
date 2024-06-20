@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Thumb_Cap
+  - SamplesInfoPanel
+  - RoomLight
+  - IndexNextPhrase
+  - Keyboard
   layers:
   - Default
   - TransparentFX

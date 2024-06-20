@@ -12,8 +12,8 @@ public class SceneStackManager : MonoBehaviour
         foreach (var keyboardType in keyboardTypes)
         {
             sceneStack.Push("WaitingScene");  
-            sceneStack.Push("TestScene");  // Push test scene
-            sceneStack.Push("TrainScene");  // Push training scene
+            sceneStack.Push("TestScene"); 
+            sceneStack.Push("TrainScene"); 
         }
     }
 

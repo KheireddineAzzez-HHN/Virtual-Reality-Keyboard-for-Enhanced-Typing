@@ -1,0 +1,120 @@
+%
+%  Thesis template for Heilbronn University of Applied Sciences
+%
+%  Created by Prof. Dr. Detlef Stern on 2010-08-14.
+%  Updated by Valentin Weber on 2020-10-05.
+%  Copyright (c) 2020 . All rights reserved.
+%
+\documentclass[12pt,toc=bib,toc=listof]{scrreprt}
+\usepackage[english]{babel} 
+\usepackage{mathptmx,amsmath,mathtools}
+% Declare acronyms
+\include{Abbreviations}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{geometry}
+\usepackage{lettrine}
+
+\usepackage{hyperref}
+\hypersetup{
+  ,colorlinks=true
+  ,linkcolor=blue
+  ,citecolor=blue
+  ,filecolor=blue
+  ,urlcolor=blue
+  }
+\usepackage{caption}
+
+% Subject related values (need updating)
+\newcommand{\hhnsubject}{SUBJECT}
+\newcommand{\hhnsubjectnum}{SPO NUMBER}
+\newcommand{\hhnlecturer}{LECTURER}
+
+% Student related values (need to be updated)
+\newcommand{\reprttopic}{ \centering Enhancing User Experience and Productivity in \ac{VR} Programming Environments}
+\newcommand{\reprtstudentname}{KHEIREDDINE AZZEZ}
+\newcommand{\reprtstudentid}{215021}
+\urldef{\reprtstudentmail}\url{kazzez@stud.hs-heilbronn.de}
+
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
+
+\usepackage[headsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearscrheadfoot
+\ihead{\hhnsubject: \reprttopic}
+\ohead{ \\ \pagemark}
+\renewcommand*{\chapterpagestyle}{scrheadings}
+\renewcommand*{\chapterheadstartvskip}{}
+
+% title page definition (begin)
+\titlehead{\flushright\includegraphics{graphics/hhn_en.png}}
+\subject{{\hhnsubject{} (\hhnsubjectnum{})}}
+\title{\reprttopic}
+\author{\reprtstudentname\footnote{\reprtstudentid, \reprtstudentmail}}
+%% Never set date to a specific value
+\publishers{Submitted to \hhnlecturer}
+% title page definition (end)
+\begin{document}
+\pagenumbering{Roman} 
+\selectlanguage{english}
+\maketitle
+\newgeometry{left=30mm, top=25mm, right=15mm, bottom=25mm}
+
+\tableofcontents
+\chapter*{List of Abbreviations}
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\printacronyms[heading=none, display=all]
+
+\label{sec:listofabbrv}
+% chapter listofabbrv (end)
+
+\listoffigures
+\listoftables
+
+\onehalfspacing
+
+\addchap{Management Summary} % (fold)
+\label{cha:management_summary}
+
+This thesis investigates the enhancement of user experience and productivity within \ac{VR} programming environments, focusing particularly on the integration of advanced \ac{FFB} and optimized virtual keyboard design. As \ac{VR} technologies evolve, there is a growing need to create more intuitive and immersive interaction systems that mimic the real-world experience as closely as possible.\\ \\
+The study explores various methodologies for improving \ac{VR} interfaces, particularly through the implementation of dynamic and adaptive \ac{FFB} systems that provide users with realistic tactile responses. This approach aims to increase the naturalness of interactions in \ac{VR}, making them feel more intuitive and less fatiguing, which is critical for productivity in programming and other detailed-oriented tasks.\\ \\
+A significant portion of the research is dedicated to the development of a virtual keyboard optimized for use in \ac{VR}. This includes experimenting with different layouts and feedback mechanisms to determine the most efficient and comfortable configurations for long-term use. By simulating realistic keyboard feedback and improving the ergonomic design of virtual input devices, the thesis aims to reduce the cognitive load and physical discomfort typically associated with virtual typing.\\ \\
+The findings suggest that enhancing \ac{FFB} and optimizing keyboard ergonomics can significantly boost both the user experience and productivity within \ac{VR} programming environments. The study provides a comprehensive set of guidelines for developers and designers to create more user-friendly \ac{VR} systems, potentially influencing future developments in \ac{VR} technology.
+
+
+% chapter management_summary (end)
+\newpage
+\pagenumbering{arabic}
+
+% report (begin)
+
+
+\include{Introduction/introdution}
+
+\include{Background/Background}
+\include{Approach/Approach}
+\include{HapticImplementation/hapticImplementation}
+\include{Development/HardwareSelection}
+\include{Development/Conception}
+
+
+
+\chapter{Conclusion} % (fold)
+\label{sec:conclusion}
+
+\ldots
+
+% chapter conclusion (end)
+
+\appendix
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}

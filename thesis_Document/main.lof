@@ -1,0 +1,28 @@
+\acswitchoff 
+\babel@toc {english}{}\relax 
+\babel@toc {english}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces VR Controller (\href {https://www.meta.com/de/en/quest/accessories/quest-touch-plus-controller/}{Meta Quest 3})\relax }}{3}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Gamepad (\href {https://www.playstation.com/de-de/accessories/playstation-vr-aim-controller/}{PS Gamepads})\relax }}{3}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Joystick (\href {https://www.vive.com/eu/accessory/controller/}{HTC Vive})\relax }}{3}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Keyboard (\href {https://www.theverge.com/2017/11/3/16602674/logitech-bridge-sdk-htc-vive-tracker-keyboard}{Logitech})\relax }}{3}{figure.caption.6}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces An illustration of the text entry with three hands-free techniques in VR \cite {Leng2022}.\relax }}{4}{figure.caption.7}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces SynTouch's 15-Dimensional Sensations \cite {quantifying_touch}\relax }}{20}{figure.caption.16}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The Sense Glove Nova \cite {senseglove_nova}\relax }}{20}{figure.caption.17}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces General Use Case Diagram for our experiment\relax }}{24}{figure.caption.18}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Network Diagram showing the interconnectivity of system components.\relax }}{26}{figure.caption.20}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Schematic representation of the virtual keyboard layout used for testing QWERTY input methods, displayed in Blender viewport shading (Solid Display).\relax }}{28}{figure.caption.22}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Schematic representation of the virtual keyboard layout used for testing QWERTY input methods, displayed in Blender viewport shading (Material Display). \relax }}{29}{figure.caption.23}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Schematic representation of the virtual key layout used for testing QW- ERTY input methods, displayed in Blender viewport shading (Solid Display)\relax }}{30}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Key Appearance After Animation\relax }}{32}{figure.caption.25}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Frequency changes across keys from 'a' to 'z'.\relax }}{33}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Semitone shifts across keys from 'a' to 'z'.\relax }}{34}{figure.caption.29}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Waveform comparison of original and shifted sounds .\relax }}{35}{figure.caption.31}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
