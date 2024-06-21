@@ -6,16 +6,55 @@ Building upon insights from the previous chapters and the integral role of hapti
 \section{Head-mounted Devices}
 \label{sec:HeadMountedDevices}
 
-In our investigation, the Meta Quest 3 is selected as the primary head-mounted display (HMD) due to its superior features when compared to its predecessors and competitors. This decision follows a comprehensive analysis of its capabilities in contrast to the HTC Vive and Oculus Rift.
+In our investigation, the Meta Quest 3 is selected as the primary head-mounted display (HMD) due to its superior features when compared to its predecessors and competitors. This decision follows a comprehensive analysis of its capabilities in contrast to other devices such as the HTC Vive, Oculus Rift, Valve Index, PlayStation VR2, Pico 4, HTC Vive Focus 3, HTC Elite XR, Varjo XR-3, Samsung Odyssey+, and HP Reverb G2.
 
-\begin{itemize}
-    \item \textbf{Meta Quest 3} offers a high-resolution LCD (2064x2208 per eye), a 120Hz refresh rate, and advanced tracking capabilities including 6 degrees of freedom (DoF) inside-out tracking via 4 integrated cameras and a depth sensor. It supports hand tracking and includes two 6DoF Meta Quest Touch Plus Controllers, providing robust connectivity options such as WiFi streaming, WiFi 6E, and Bluetooth.
-    
-    \item \textbf{HTC Vive}, on the other hand, features an OLED display with a resolution of 1080x1200 per eye and a 90Hz refresh rate. It employs a marker-based tracking system and includes two 6DoF HTC Vive controllers but lacks hand tracking, WiFi, and Bluetooth.
-    
-    \item \textbf{Oculus Rift} provides an AMOLED display with a resolution of 1080x1200 per eye and a 90Hz refresh rate. It uses an outside-in tracking system and includes two first-generation 6DoF Oculus Touch controllers but does not support hand tracking, WiFi, or Bluetooth.
-\end{itemize}
-Given these specifications, Meta Quest 3 is chosen for its cutting-edge display quality, superior tracking, and enhanced connectivity, making it the most suitable option for our experiments.
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{|p{2.5cm}|p{2cm}|p{3cm}|p{2cm}|p{4.5cm}|}
+  \hline
+  \textbf{Device} & \textbf{Display} & \textbf{Resolution (per eye)} & \textbf{Refresh Rate} & \textbf{Tracking} \\ \hline
+  Meta Quest 3 & LCD & 2064x2208 & 120Hz & 6DoF inside-out (4 cameras, depth sensor) \\ \hline
+  HTC Vive & OLED & 1080x1200 & 90Hz & 6DoF outside-in (base stations) \\ \hline
+  Oculus Rift & OLED & 1080x1200 & 90Hz & 6DoF outside-in (sensors) \\ \hline
+  Valve Index & LCD & 1440x1600 & Up to 144Hz & 6DoF outside-in (2 base stations) \\ \hline
+  PlayStation VR2 & OLED & 2000x2040 & 120Hz & 6DoF inside-out (4 cameras) \\ \hline
+  Pico 4 & LCD & 2160x2160 & 90Hz & 6DoF inside-out (4 cameras) \\ \hline
+  HTC Vive Focus 3 & LCD & 2448x2448 & 90Hz & 6DoF inside-out (4 cameras) \\ \hline
+  HTC Elite XR & OLED & 1600x1600 & 90Hz & 6DoF inside-out \\ \hline
+  Varjo XR-3 & Micro-OLED & 1920x1920 (focus area) \newline 2880x2720 (peripheral area) & 90Hz & 6DoF inside-out (integrated cameras) \\ \hline
+  Samsung Odyssey+ & AMOLED & 1440x1600 & 90Hz & 6DoF inside-out \\ \hline
+  HP Reverb G2 & LCD & 2160x2160 & 90Hz & 6DoF inside-out (4 cameras) \\ \hline
+  \end{tabular}
+  \caption{Comparison of Head-mounted Devices}
+  \label{table:head_mounted_devices}
+  \end{table}
+  
+  \begin{table}[h!]
+  \centering
+  \begin{tabular}{|p{2.5cm}|p{3cm}|p{3cm}|p{5cm}|}
+  \hline
+  \textbf{Device} & \textbf{Controllers} & \textbf{Connectivity} & \textbf{Additional Features} \\ \hline
+  Meta Quest 3 & 2 6DoF Touch Plus & WiFi 6E, Bluetooth, USB-C & Hand tracking, WiFi streaming \cite{metaQuest3} \\ \hline
+  HTC Vive & 2 6DoF Vive & USB, HDMI & Expandable with wireless adapter \cite{htcVive} \\ \hline
+  Oculus Rift & 2 6DoF Touch (1st gen) & USB, HDMI & Oculus Store integration \cite{oculusRift} \\ \hline
+  Valve Index & 2 advanced 6DoF (finger tracking) & DisplayPort 1.2, USB 3.0 & Adjustable IPD, Comfortable design \cite{valveIndex} \\ \hline
+  PlayStation VR2 & 2 6DoF PS VR2 Sense & USB-C to PS5 & Adaptive triggers, haptic feedback \cite{psVR2} \\ \hline
+  Pico 4 & 2 6DoF (capacitive touch) & WiFi 6, Bluetooth, USB-C & Lightweight design \cite{pico4} \\ \hline
+  HTC Vive Focus 3 & 2 6DoF & WiFi 6, Bluetooth & Business applications \cite{viveFocus3} \\ \hline
+  HTC Elite XR & Advanced (haptic feedback) & WiFi 6, Bluetooth & High comfort, VR and AR capabilities \cite{eliteXR} \\ \hline
+  Varjo XR-3 & Professional-grade & Ethernet, USB-C, DisplayPort & High-fidelity focus area, Mixed Reality \cite{varjoXR3} \\ \hline
+  Samsung Odyssey+ & 2 6DoF & WiFi, Bluetooth & Anti-SDE (Screen Door Effect) technology \cite{odysseyPlus} \\ \hline
+  HP Reverb G2 & 2 6DoF & WiFi, Bluetooth & High resolution, Adjustable lenses \cite{reverbG2} \\ \hline
+  \end{tabular}
+  \caption{Additional Features of Head-mounted Devices}
+  \label{table:additional_features}
+  \end{table}
+  
+  \clearpage %
+  
+
+
+Given these specifications, Meta Quest 3 is chosen for its cutting-edge display quality, superior tracking, and enhanced connectivity, making it the most suitable option for our experiments. 
 
 \section{Haptic Sensations and Devices}
 \label{sec:HapticSensationsDevices}
@@ -49,6 +88,8 @@ For the experimental setup, we propose using the SenseGlove Nova, renowned for i
 \noindent
 The SenseGlove Nova's combination of force feedback, vibrotactile feedback, and precise tracking makes it an ideal choice for applications requiring detailed and nuanced hand interactions. Its advanced technology supports a wide range of virtual reality applications, from training simulations to interactive gaming, by providing users with a tactile experience that closely mimics real-world interactions.\\ \\
 The use of SenseGlove Nova in our experimental setup is expected to significantly enhance the user experience by providing realistic and responsive haptic feedback. This technology not only improves the immersion but also aids in tasks requiring fine motor skills and detailed manipulation of virtual objects, making it a valuable tool for our virtual reality system \cite{advanced_haptic_gloves_review}.
+
+
 
 \section{Virtual Environment Development with Unity}
 \label{subsec:VirtualEnvironmentDevelopmentWithUnity}

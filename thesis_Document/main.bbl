@@ -125,6 +125,26 @@ Juan~David Hincapié-Ramos and Pourang Irani.
 \newblock {\em International Journal of Human-Computer Studies},
   72(6):609--623, 2014.
 
+\bibitem{reverbG2}
+HP.
+\newblock Hp reverb g2 specifications.
+\newblock {\em HP Official Website}, 2023.
+
+\bibitem{eliteXR}
+HTC.
+\newblock Htc elite xr specifications.
+\newblock {\em HTC Official Website}, 2023.
+
+\bibitem{viveFocus3}
+HTC.
+\newblock Htc vive focus 3 specifications.
+\newblock {\em HTC Official Website}, 2023.
+
+\bibitem{htcVive}
+HTC.
+\newblock Htc vive specifications.
+\newblock {\em HTC Official Website}, 2023.
+
 \bibitem{appleCoreHaptics}
 Apple Inc.
 \newblock {\em Core Haptics}, 2023.
@@ -197,6 +217,11 @@ David McNeill.
 \newblock Gesture and environment.
 \newblock {\em Journal of Pragmatics}, 41(3):518--530, 2009.
 
+\bibitem{metaQuest3}
+Meta.
+\newblock Meta quest 3 specifications.
+\newblock {\em Meta Official Website}, 2023.
+
 \bibitem{milgram1994taxonomy}
 Paul Milgram, Haruo Takemura, Akira Utsumi, and Fumio Kishino.
 \newblock A taxonomy of mixed reality visual displays.
@@ -227,10 +252,20 @@ Donald~A. Norman.
 \newblock {\em The Design of Everyday Things: Revised and Expanded Edition}.
 \newblock Basic Books, 2013.
 
+\bibitem{oculusRift}
+Oculus.
+\newblock Oculus rift specifications.
+\newblock {\em Oculus Official Website}, 2023.
+
 \bibitem{openai}
 OpenAI.
 \newblock Chatgpt can now see, hear, and speak.
 \newblock \url{https://www.openai.com}, 2024.
+
+\bibitem{pico4}
+Pico.
+\newblock Pico 4 specifications.
+\newblock {\em Pico Official Website}, 2023.
 
 \bibitem{pydub}
 James Robert.
@@ -241,6 +276,11 @@ James Robert.
 E.~S. and R.~Teather.
 \newblock Text entry in virtual reality: Implementation of flik method and text
   entry testbed, 10 2020.
+
+\bibitem{odysseyPlus}
+Samsung.
+\newblock Samsung odyssey+ specifications.
+\newblock {\em Samsung Official Website}, 2023.
 
 \bibitem{vrLanguageLearning2021}
 Maria Santos and Hieu Nguyen.
@@ -296,6 +336,11 @@ John~G. Smith.
 \newblock Digital signal processing: Principles, algorithms, and applications.
 \newblock {\em Journal of Audio Engineering}, 47(6):453--461, 1999.
 
+\bibitem{psVR2}
+Sony.
+\newblock Playstation vr2 specifications.
+\newblock {\em PlayStation Official Website}, 2023.
+
 \bibitem{spence2008multisensory}
 Charles Spence and John Driver.
 \newblock {\em Multisensory Design: Handbook of Multisensory Integration}.
@@ -331,6 +376,16 @@ Yellow Systems.
 Online~Tech Tips.
 \newblock How to add and use chatgpt with whatsapp.
 \newblock \url{https://www.online-tech-tips.com}, 2023.
+
+\bibitem{valveIndex}
+Valve.
+\newblock Valve index specifications.
+\newblock {\em Valve Official Website}, 2023.
+
+\bibitem{varjoXR3}
+Varjo.
+\newblock Varjo xr-3 specifications.
+\newblock {\em Varjo Official Website}, 2023.
 
 \bibitem{ware2012information}
 Colin Ware.
