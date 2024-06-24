@@ -205,6 +205,11 @@ Meng Li and Yan Zhou.
   reality.
 \newblock {\em Journal of Medical VR}, 5(1):10--25, 2023.
 
+\bibitem{mackenzie_phrase_set}
+Scott MacKenzie.
+\newblock Phrase sets for evaluating text entry techniques.
+\newblock \url{https://www.yorku.ca/mack/RN-PhraseSet.html}.
+
 \bibitem{mcgill2015dovetail}
 Mark McGill and Stephen Brewster.
 \newblock Dovetail: Modular systems for building and evaluating interfaces for

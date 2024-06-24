@@ -94,7 +94,7 @@ public class Keyboard : MonoBehaviour
         {
             typedLetter = " ";
         }
-        else if (typedLetter == "point"){
+        else if (typedLetter == "point") {
 
             typedLetter = ".";
         }
@@ -107,11 +107,22 @@ public class Keyboard : MonoBehaviour
                 return;
             }
 
+
+
+
         }
 
+        if (typedLetter.Length == 1)
+        {
+            instert_key_to_InputText(typedLetter);
+            print(typedLetter);
 
-        instert_key_to_InputText(typedLetter);
-        print(typedLetter);
+
+        }
+        else if (typedLetter.Length == 1)
+        {
+            print("keyIsNotsupported");
+        }
 
     }
 

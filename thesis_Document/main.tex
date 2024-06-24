@@ -8,6 +8,7 @@
 \documentclass[12pt,toc=bib,toc=listof]{scrreprt}
 \usepackage[english]{babel} 
 \usepackage{mathptmx,amsmath,mathtools}
+
 % Declare acronyms
 \include{Abbreviations}
 \usepackage[utf8]{inputenc}
@@ -16,6 +17,7 @@
 \usepackage{setspace}
 \usepackage{geometry}
 \usepackage{lettrine}
+\usepackage{subcaption}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -26,7 +28,6 @@
   ,urlcolor=blue
   }
 \usepackage{caption}
-\usepackage{tabularx}
 
 % Subject related values (need updating)
 \newcommand{\hhnsubject}{SUBJECT}
@@ -47,6 +48,9 @@
 \fi
 
 \usepackage[headsepline]{scrlayer-scrpage}
+\usepackage{pdfpages} % Add this package
+\usepackage{lscape} 
+
 \pagestyle{scrheadings}
 \clearscrheadfoot
 \ihead{\hhnsubject: \reprttopic}
@@ -104,6 +108,7 @@ The findings suggest that enhancing \ac{FFB} and optimizing keyboard ergonomics 
 \include{HapticImplementation/hapticImplementation}
 \include{Development/HardwareSelection}
 \include{Development/Conception}
+
 \include{Scenario/Scenario}
 
 

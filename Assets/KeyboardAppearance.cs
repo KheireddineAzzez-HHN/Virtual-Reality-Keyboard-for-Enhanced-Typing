@@ -6,21 +6,30 @@ public class KeyboardAppearance : MonoBehaviour
     public static KeyboardAppearance Instance { get; private set; }
 
     private Dictionary<string, GameObject> keyboardObjects;
-
+    current_Scene_Env env;
     void Awake()
     {
-        if (Instance == null)
+    }
+    private void Start()
+    {
+        env = FindObjectOfType<current_Scene_Env>();
+
+        if (env != null)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-            FindKeyboardObjects();
-        }
-        else
-        {
-            Destroy(gameObject);
+            if(env.Scene_Type == KeyboardConfig.env_data_collection.USERCONFIG)
+            {
+                Debug.Log("No need to hide keyboards");
+            }
+
+            else
+            {
+                FindKeyboardObjects();
+                UpdateKeyboards(GameManager.Instance.CurrentKeyboardType);
+            }
+    
+
         }
     }
-
     private void FindKeyboardObjects()
     {
         keyboardObjects = new Dictionary<string, GameObject>();

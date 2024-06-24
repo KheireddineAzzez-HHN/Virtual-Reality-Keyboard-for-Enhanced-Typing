@@ -21,9 +21,11 @@ public class TypingManager : MonoBehaviour
     private string Wainting_message = "Please click on the button to display the next phrase";
 
     private current_Scene_Env currentEnv;
+    public List<Button> buttons = new List<Button>();
 
     private void OnEnable()
     {
+        UseActiveButton();
 
         phraseLoader.OnPhrasesLoaded += InitializeTypingTest;
         NextPhrase.IndexFinger += Check_Finger_INDEX_STATUS;
@@ -37,9 +39,25 @@ public class TypingManager : MonoBehaviour
         currentEnv = FindAnyObjectByType<current_Scene_Env>();
         nextPhraseButton.interactable = false;
 
+
     }
 
+    void UseActiveButton()
+    {
+        foreach (Button button in buttons)
+        {
+            if (button != null)
+            {
+                if (button.gameObject.activeInHierarchy)
+                {
+                    nextPhraseButton = button;
+                    break;
+                }
 
+            }
+   
+        }
+    }
     public void wainting_Next_phrase()
     {
         typingController.myInputField.DeactivateInputField();
@@ -113,7 +131,6 @@ public class TypingManager : MonoBehaviour
             nextPhraseButton.interactable = true;
 
             wainting_Next_phrase();
-            nextPhraseButton.interactable = finishing_Status;
             
 
 
@@ -145,6 +162,5 @@ public class TypingManager : MonoBehaviour
     {
         Debug.Log("Test completed!");
     }
-
 
 }

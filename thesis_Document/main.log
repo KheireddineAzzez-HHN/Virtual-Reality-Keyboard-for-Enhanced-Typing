@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.20)  20 JUN 2024 17:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.6.20)  24 JUN 2024 21:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -274,7 +274,7 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \xmathstrut@dim=\dimen158
 )
 
-LaTeX Warning: \include should only be used after \begin{document} on input line 12.
+LaTeX Warning: \include should only be used after \begin{document} on input line 13.
 
 (Abbreviations.tex (C:\Program Files\MiKTeX\tex/latex/acro\acro.sty (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2022-09-28 L3 programming layer (loader) 
@@ -453,6 +453,29 @@ Package: xfp 2022-06-22 L3 Floating point unit
 Loading lettrine.cfg
 (C:\Program Files\MiKTeX\tex/latex/lettrine\lettrine.cfg)
 \Llist@everypar=\toks25
+) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+ (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen187
+\captionmargin=\dimen188
+\caption@leftmargin=\dimen189
+\caption@rightmargin=\dimen190
+\caption@width=\dimen191
+\caption@indent=\dimen192
+\caption@parindent=\dimen193
+\caption@hangindent=\dimen194
+Package caption Info: KOMA-Script document class detected.
+ (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-koma.sto
+File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count321
+\c@continuedfloat=\count322
+)
+\c@subfigure=\count323
+\c@subtable=\count324
 ) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2022-09-22 v7.00t Hypertext links for LaTeX
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
@@ -476,11 +499,11 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count321
+\c@section@level=\count325
 )
-\@linkdim=\dimen187
-\Hy@linkcounter=\count322
-\Hy@pagecounter=\count323
+\@linkdim=\dimen195
+\Hy@linkcounter=\count326
+\Hy@pagecounter=\count327
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2022-09-22 v7.00t Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -490,7 +513,7 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 ) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/generic/etexcmds\etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count324
+\Hy@SavedSpaceFactor=\count328
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2022-09-22 v7.00t Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -502,24 +525,24 @@ Package hyperref Info: Hyper index ON on input line 4170.
 Package hyperref Info: Plain pages OFF on input line 4177.
 Package hyperref Info: Backreferencing OFF on input line 4182.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-\stockwidth=\dimen188
-\stockheight=\dimen189
+\stockwidth=\dimen196
+\stockheight=\dimen197
 Package hyperref Info: Bookmarks ON on input line 4410.
-\c@Hy@tempcnt=\count325
+\c@Hy@tempcnt=\count329
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4748.
-\XeTeXLinkMargin=\dimen190
+\XeTeXLinkMargin=\dimen198
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count326
-\Field@Width=\dimen191
-\Fld@charsize=\dimen192
+\Fld@menulength=\count330
+\Field@Width=\dimen199
+\Fld@charsize=\dimen256
 Package hyperref Info: Hyper figures OFF on input line 6027.
 Package hyperref Info: Link nesting OFF on input line 6032.
 Package hyperref Info: Hyper index ON on input line 6035.
@@ -531,9 +554,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6057.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count327
-\c@Item=\count328
-\c@Hfootnote=\count329
+\Hy@abspage=\count331
+\c@Item=\count332
+\c@Hfootnote=\count333
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -542,8 +565,8 @@ File: hpdftex.def 2022-09-22 v7.00t Hyperref driver for pdfTeX
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
-\Fld@listcount=\count330
-\c@bookmark@seq@number=\count331
+\Fld@listcount=\count334
+\c@bookmark@seq@number=\count335
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -553,46 +576,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip71
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 27.
- (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
-Package: caption 2022/03/01 v3.6b Customizing captions (AR)
- (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
-Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen193
-\captionmargin=\dimen194
-\caption@leftmargin=\dimen195
-\caption@rightmargin=\dimen196
-\caption@width=\dimen197
-\caption@indent=\dimen198
-\caption@parindent=\dimen199
-\caption@hangindent=\dimen256
-Package caption Info: KOMA-Script document class detected.
- (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-koma.sto
-File: caption-koma.sto 2020/09/21 v2.0b Adaption of the caption package to the KOMA-Script document classes (AR)
-))
-\c@caption@flags=\count332
-\c@continuedfloat=\count333
-Package caption Info: hyperref package is loaded.
-) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
-Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
- (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
-Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
-\col@sep=\dimen257
-\ar@mcellbox=\box60
-\extrarowheight=\dimen258
-\NC@list=\toks26
-\extratabsurround=\skip72
-\backup@length=\skip73
-\ar@cellbox=\box61
-)
-\TX@col@width=\dimen259
-\TX@old@table=\dimen260
-\TX@old@col=\dimen261
-\TX@target=\dimen262
-\TX@delta=\dimen263
-\TX@cols=\count334
-\TX@ftn=\toks27
-) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
+Package hyperref Info: Option `colorlinks' set `true' on input line 29.
+ (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 ) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -607,8 +592,8 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen264
-\Gin@req@width=\dimen265
+\Gin@req@height=\dimen257
+\Gin@req@width=\dimen258
 ) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer-scrpage.sty
 Package: scrlayer-scrpage 2022/10/12 v3.38 KOMA-Script package (end user interface for scrlayer)
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/koma-script\scrlayer.sty
@@ -617,12 +602,53 @@ Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 2176
 )
 Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
 (scrlayer-scrpage)             alias to `pageheadfoot' on input line 1089.
+) (C:\Program Files\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2024/05/29 v0.6a Insert pages of external PDF documents (AM)
+ (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (C:\Program Files\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen259
+\ESO@tempdimb=\dimen260
+ (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/xcolor\xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+))
+\AM@pagewidth=\dimen261
+\AM@pageheight=\dimen262
+\AM@fboxrule=\dimen263
+ (C:\Program Files\MiKTeX\tex/latex/pdfpages\pppdftex.def
+File: pppdftex.def 2024/05/29 v0.6a Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count336
+\AM@pagebox=\box60
+\AM@global@opts=\toks26
+\AM@pagecnt=\count337
+\AM@toc@title=\toks27
+\AM@lof@heading=\toks28
+\c@AM@survey=\count338
+\AM@templatesizebox=\box61
+) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 
 Package scrlayer-scrpage Warning: replacing deprecated \clearscrheadfoot by
-(scrlayer-scrpage)                \clearpairofpagestyles on input line 51.
+(scrlayer-scrpage)                \clearpairofpagestyles on input line 55.
 
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 65.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 69.
 (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (main.aux (Introduction/introdution.aux) (Background/Background.aux) (Approach/Approach.aux) (HapticImplementation/hapticImplementation.aux) (Development/HardwareSelection.aux
@@ -642,39 +668,39 @@ LaTeX Warning: Label `fig:keyboard_sin' multiply defined.
 ) (Scenario/Scenario.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-Package scrbase Info: activating english \abstractname on input line 65.
-Package scrbase Info: activating english \partname on input line 65.
-Package scrbase Info: activating english \chaptername on input line 65.
-Package scrbase Info: activating english \appendixname on input line 65.
-Package scrbase Info: activating english \figurename on input line 65.
-Package scrbase Info: activating english \tablename on input line 65.
-Package scrbase Info: activating english \contentsname on input line 65.
-Package scrbase Info: activating english \listfigurename on input line 65.
-Package scrbase Info: activating english \listtablename on input line 65.
-Package scrbase Info: activating english \bibname on input line 65.
-Package scrbase Info: activating english \indexname on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 69.
+LaTeX Font Info:    ... okay on input line 69.
+Package scrbase Info: activating english \abstractname on input line 69.
+Package scrbase Info: activating english \partname on input line 69.
+Package scrbase Info: activating english \chaptername on input line 69.
+Package scrbase Info: activating english \appendixname on input line 69.
+Package scrbase Info: activating english \figurename on input line 69.
+Package scrbase Info: activating english \tablename on input line 69.
+Package scrbase Info: activating english \contentsname on input line 69.
+Package scrbase Info: activating english \listfigurename on input line 69.
+Package scrbase Info: activating english \listtablename on input line 69.
+Package scrbase Info: activating english \bibname on input line 69.
+Package scrbase Info: activating english \indexname on input line 69.
  (C:\Program Files\MiKTeX\tex/latex/translations/dicts\translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 65.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 69.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -710,15 +736,11 @@ Package translations Info: loading dictionary `translations-basic-dictionary' fo
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
- (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: pdftex.def on input line 149.
- (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 65.
- (main.out) (main.out)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 69.
+(main.out) (main.out)
 \@outlinefile=\write3
 \openout3 = `main.out'.
 
@@ -729,92 +751,94 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 65.
+(scrreprt)           before \begin{document} on input line 69.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count335
-))
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
- (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+\BKM@id=\count339
+)) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count336
-\scratchdimen=\dimen266
+\scratchcounter=\count340
+\scratchdimen=\dimen264
 \scratchbox=\box62
-\nofMPsegments=\count337
-\nofMParguments=\count338
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count339
-\MPscratchDim=\dimen267
-\MPnumerator=\count340
-\makeMPintoPDFobject=\count341
-\everyMPtoPDFconversion=\toks29
+\nofMPsegments=\count341
+\nofMParguments=\count342
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count343
+\MPscratchDim=\dimen265
+\MPnumerator=\count344
+\makeMPintoPDFobject=\count345
+\everyMPtoPDFconversion=\toks30
 ) (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)) (C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+ (C:\Program Files\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PDF (HO)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 <graphics/hhn_en.png, id=3, 117.07938pt x 53.53334pt>
 File: graphics/hhn_en.png Graphic file (type png)
 <use graphics/hhn_en.png>
-Package pdftex.def Info: graphics/hhn_en.png  used on input line 68.
+Package pdftex.def Info: graphics/hhn_en.png  used on input line 72.
 (pdftex.def)             Requested size: 117.07907pt x 53.5332pt.
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 68.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 72.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 68.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 72.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 68.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 72.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 68.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 72.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 68.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 72.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <17.28> on input line 68.
+(Font)              <17.28> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 68.
+(Font)              <12> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 68.
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 68.
+(Font)              <10> on input line 72.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 72.
  (C:\Program Files\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 72.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 68.
+(Font)              <10.95> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 68.
+(Font)              <8> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 68.
+(Font)              <6> on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 68.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 72.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 72.
  (C:\Users\kheir\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
@@ -905,7 +929,7 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=35.9889pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 84.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 88.
 
 
 Overfull \vbox (6.98892pt too high) has occurred while \output is active []
@@ -915,17 +939,17 @@ Overfull \vbox (6.98892pt too high) has occurred while \output is active []
 ]
 chapter without number
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--91
+Underfull \hbox (badness 10000) in paragraph at lines 91--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--91
+Underfull \hbox (badness 10000) in paragraph at lines 91--95
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--91
+Underfull \hbox (badness 10000) in paragraph at lines 91--95
 
  []
 
@@ -960,12 +984,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--24
 
 
 ])
-Underfull \hbox (badness 10000) in paragraph at lines 27--100
+Underfull \hbox (badness 10000) in paragraph at lines 27--104
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--100
+Underfull \hbox (badness 10000) in paragraph at lines 27--104
 
  []
 
@@ -974,22 +998,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--100
 
  (Background/Background.tex
 chapter 2.
-<Background/Quest-3-controllers.png.jpg, id=247, 542.025pt x 542.025pt>
+<Background/Quest-3-controllers.png.jpg, id=285, 542.025pt x 542.025pt>
 File: Background/Quest-3-controllers.png.jpg Graphic file (type jpg)
 <use Background/Quest-3-controllers.png.jpg>
 Package pdftex.def Info: Background/Quest-3-controllers.png.jpg  used on input line 11.
 (pdftex.def)             Requested size: 78.87172pt x 78.86867pt.
-<Background/ps4_controller_png_13_1058.png, id=250, 160.6pt x 106.3975pt>
+<Background/ps4_controller_png_13_1058.png, id=288, 160.6pt x 106.3975pt>
 File: Background/ps4_controller_png_13_1058.png Graphic file (type png)
 <use Background/ps4_controller_png_13_1058.png>
 Package pdftex.def Info: Background/ps4_controller_png_13_1058.png  used on input line 18.
 (pdftex.def)             Requested size: 90.13615pt x 59.71693pt.
-<Background/kisspng-htc-vive-playstation-vr-head-mounted-display-oculu-vive-controller-accessories-5b45845dcff760.0171668615312825258518-removebg-preview.png, id=253, 233.87375pt x 270.00874pt>
+<Background/kisspng-htc-vive-playstation-vr-head-mounted-display-oculu-vive-controller-accessories-5b45845dcff760.0171668615312825258518-removebg-preview.png, id=291, 233.87375pt x 270.00874pt>
 File: Background/kisspng-htc-vive-playstation-vr-head-mounted-display-oculu-vive-controller-accessories-5b45845dcff760.0171668615312825258518-removebg-preview.png Graphic file (type png)
 <use Background/kisspng-htc-vive-playstation-vr-head-mounted-display-oculu-vive-controller-accessories-5b45845dcff760.0171668615312825258518-removebg-preview.png>
 Package pdftex.def Info: Background/kisspng-htc-vive-playstation-vr-head-mounted-display-oculu-vive-controller-accessories-5b45845dcff760.0171668615312825258518-removebg-preview.png  used on input line 28.
 (pdftex.def)             Requested size: 67.60384pt x 78.0492pt.
-<Background/head-removebg-preview.png, id=256, 340.27126pt x 184.69pt>
+<Background/head-removebg-preview.png, id=294, 340.27126pt x 184.69pt>
 File: Background/head-removebg-preview.png Graphic file (type png)
 <use Background/head-removebg-preview.png>
 Package pdftex.def Info: Background/head-removebg-preview.png  used on input line 33.
@@ -999,7 +1023,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--41
 
  []
 
-<Background/freehand_Blink.png, id=260, 662.475pt x 301.125pt>
+<Background/freehand_Blink.png, id=298, 662.475pt x 301.125pt>
 File: Background/freehand_Blink.png Graphic file (type png)
 <use Background/freehand_Blink.png>
 Package pdftex.def Info: Background/freehand_Blink.png  used on input line 44.
@@ -1205,7 +1229,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--35
  []
 
 [16] [17])
-Underfull \hbox (badness 10000) in paragraph at lines 63--104
+Underfull \hbox (badness 10000) in paragraph at lines 63--108
 
  []
 
@@ -1216,47 +1240,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--104
 chapter 4.
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
-[]|\T1/lmr/bx/n/12 Resolution
+[]\T1/lmr/bx/n/12 Resolution
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
-[]|\T1/lmr/bx/n/12 Refresh
+[]\T1/lmr/bx/n/12 Refresh
  []
 
 
 Underfull \hbox (badness 5231) in paragraph at lines 17--17
-[]|\T1/lmr/m/n/12 6DoF outside-in (base
+[]\T1/lmr/m/n/12 6DoF outside-in (base
  []
 
 
 Underfull \hbox (badness 7631) in paragraph at lines 18--18
-[]|\T1/lmr/m/n/12 6DoF outside-in (sen-
+[]\T1/lmr/m/n/12 6DoF outside-in (sen-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 19--19
-[]|\T1/lmr/m/n/12 Up to
+[]\T1/lmr/m/n/12 Up to
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 20--20
-[]|\T1/lmr/m/n/12 PlayStation
+[]\T1/lmr/m/n/12 PlayStation
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--23
-[]|\T1/lmr/m/n/12 HTC Elite
+[]\T1/lmr/m/n/12 HTC Elite
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 24--24
-[]|\T1/lmr/m/n/12 Micro-
+[]\T1/lmr/m/n/12 Micro-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 24--24
-[]|\T1/lmr/m/n/12 1920x1920 (fo-
+[]\T1/lmr/m/n/12 1920x1920 (fo-
  []
 
 
@@ -1266,17 +1290,17 @@ Underfull \hbox (badness 6016) in paragraph at lines 24--24
 
 
 Underfull \hbox (badness 4316) in paragraph at lines 24--24
-[]|\T1/lmr/m/n/12 6DoF inside-out (in-te-
+[]\T1/lmr/m/n/12 6DoF inside-out (in-te-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--25
-[]|\T1/lmr/m/n/12 Samsung
+[]\T1/lmr/m/n/12 Samsung
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 26--26
-[]|\T1/lmr/m/n/12 HP Re-verb
+[]\T1/lmr/m/n/12 HP Re-verb
  []
 
 
@@ -1284,32 +1308,32 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 Underfull \hbox (badness 2818) in paragraph at lines 37--37
-[]|\T1/lmr/m/n/12 2 6DoF Touch
+[]\T1/lmr/m/n/12 2 6DoF Touch
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 37--37
-[]|\T1/lmr/m/n/12 Hand track-ing, WiFi
+[]\T1/lmr/m/n/12 Hand track-ing, WiFi
  []
 
 
 Underfull \hbox (badness 2689) in paragraph at lines 38--38
-[]|\T1/lmr/m/n/12 Expandable with wire-less
+[]\T1/lmr/m/n/12 Expandable with wire-less
  []
 
 
 Underfull \hbox (badness 2818) in paragraph at lines 39--39
-[]|\T1/lmr/m/n/12 2 6DoF Touch
+[]\T1/lmr/m/n/12 2 6DoF Touch
  []
 
 
 Underfull \hbox (badness 7522) in paragraph at lines 39--39
-[]|\T1/lmr/m/n/12 Oculus Store in-te-gra-tion
+[]\T1/lmr/m/n/12 Oculus Store in-te-gra-tion
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 40--40
-[]|\T1/lmr/m/n/12 2 ad-vanced
+[]\T1/lmr/m/n/12 2 ad-vanced
  []
 
 
@@ -1319,57 +1343,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 40--40
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 41--41
-[]|\T1/lmr/m/n/12 PlayStation
+[]\T1/lmr/m/n/12 PlayStation
  []
 
 
 Underfull \hbox (badness 3386) in paragraph at lines 41--41
-[]|\T1/lmr/m/n/12 Adaptive trig-gers, hap-tic
+[]\T1/lmr/m/n/12 Adaptive trig-gers, hap-tic
  []
 
 
 Underfull \hbox (badness 3838) in paragraph at lines 42--42
-[]|\T1/lmr/m/n/12 WiFi 6, Blue-
+[]\T1/lmr/m/n/12 WiFi 6, Blue-
  []
 
 
 Underfull \hbox (badness 3838) in paragraph at lines 43--43
-[]|\T1/lmr/m/n/12 WiFi 6, Blue-
+[]\T1/lmr/m/n/12 WiFi 6, Blue-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 44--44
-[]|\T1/lmr/m/n/12 HTC Elite
+[]\T1/lmr/m/n/12 HTC Elite
  []
 
 
 Underfull \hbox (badness 3838) in paragraph at lines 44--44
-[]|\T1/lmr/m/n/12 WiFi 6, Blue-
+[]\T1/lmr/m/n/12 WiFi 6, Blue-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 45--45
-[]|\T1/lmr/m/n/12 Professional-
+[]\T1/lmr/m/n/12 Professional-
  []
 
 
 Underfull \hbox (badness 1072) in paragraph at lines 45--45
-[]|\T1/lmr/m/n/12 Ethernet, USB-
+[]\T1/lmr/m/n/12 Ethernet, USB-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 45--45
-[]|\T1/lmr/m/n/12 High-fidelity fo-cus area,
+[]\T1/lmr/m/n/12 High-fidelity fo-cus area,
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 46--46
-[]|\T1/lmr/m/n/12 Samsung
+[]\T1/lmr/m/n/12 Samsung
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 47--47
-[]|\T1/lmr/m/n/12 HP Re-verb
+[]\T1/lmr/m/n/12 HP Re-verb
  []
 
 
@@ -1381,12 +1405,12 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 ] [20] [21]
-<Development/senstations.PNG, id=495, 670.30424pt x 373.99725pt>
+<Development/senstations.PNG, id=533, 670.30424pt x 373.99725pt>
 File: Development/senstations.PNG Graphic file (type png)
 <use Development/senstations.PNG>
 Package pdftex.def Info: Development/senstations.PNG  used on input line 65.
 (pdftex.def)             Requested size: 375.57787pt x 209.55685pt.
-<Development/sense-glove-nova-set.jpg, id=498, 340.27126pt x 340.27126pt>
+<Development/sense-glove-nova-set.jpg, id=536, 340.27126pt x 340.27126pt>
 File: Development/sense-glove-nova-set.jpg Graphic file (type jpg)
 <use Development/sense-glove-nova-set.jpg>
 Package pdftex.def Info: Development/sense-glove-nova-set.jpg  used on input line 77.
@@ -1408,7 +1432,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 132--134
 
  (Development/Conception.tex
 chapter 5.
-<Development/Picture1.jpg, id=540, 388.6155pt x 265.0995pt>
+<Development/Picture1.jpg, id=578, 388.6155pt x 265.0995pt>
 File: Development/Picture1.jpg Graphic file (type jpg)
 <use Development/Picture1.jpg>
 Package pdftex.def Info: Development/Picture1.jpg  used on input line 13.
@@ -1420,16 +1444,16 @@ Package pdftex.def Info: Development/Picture1.jpg  used on input line 13.
 
  <./Development/Picture1.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 25--25
-[]|\T1/lmr/m/n/12 Login/Initialize VR
+[]\T1/lmr/m/n/12 Login/Initialize VR
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 27--27
-[]|\T1/lmr/m/n/12 Enter VR Typ-ing
+[]\T1/lmr/m/n/12 Enter VR Typ-ing
  []
 
 [27]
-<Development/networkDiagram.png, id=551, 371.5335pt x 250.6455pt>
+<Development/networkDiagram.png, id=589, 371.5335pt x 250.6455pt>
 File: Development/networkDiagram.png Graphic file (type png)
 <use Development/networkDiagram.png>
 Package pdftex.def Info: Development/networkDiagram.png  used on input line 56.
@@ -1438,17 +1462,17 @@ Package pdftex.def Info: Development/networkDiagram.png  used on input line 56.
 
  <./Development/networkDiagram.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 71--71
-[]|\T1/lmr/m/n/12 SenseGlove
+[]\T1/lmr/m/n/12 SenseGlove
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 73--73
-[]|\T1/lmr/m/n/12 Wireless Net-
+[]\T1/lmr/m/n/12 Wireless Net-
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 79--79
-[]|\T1/lmr/m/n/12 Head-Mounted
+[]\T1/lmr/m/n/12 Head-Mounted
  []
 
 
@@ -1464,7 +1488,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--92
 [29
 
 ]
-<Development/keyboard_size.png, id=567, 636.12656pt x 589.4522pt>
+<Development/keyboard_size.png, id=605, 636.12656pt x 589.4522pt>
 File: Development/keyboard_size.png Graphic file (type png)
 <use Development/keyboard_size.png>
 Package pdftex.def Info: Development/keyboard_size.png  used on input line 99.
@@ -1480,7 +1504,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 103--105
  []
 
 [30 <./Development/keyboard_size.png>]
-<Development/keybordViewPort.PNG, id=577, 711.8595pt x 338.4645pt>
+<Development/keybordViewPort.PNG, id=615, 711.8595pt x 338.4645pt>
 File: Development/keybordViewPort.PNG Graphic file (type png)
 <use Development/keybordViewPort.PNG>
 Package pdftex.def Info: Development/keybordViewPort.PNG  used on input line 108.
@@ -1501,7 +1525,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 116--118
  []
 
 [31 <./Development/keybordViewPort.PNG>]
-<Development/keyboard_image2.PNG, id=589, 542.62724pt x 318.59026pt>
+<Development/keyboard_image2.PNG, id=627, 542.62724pt x 318.59026pt>
 File: Development/keyboard_image2.PNG Graphic file (type png)
 <use Development/keyboard_image2.PNG>
 Package pdftex.def Info: Development/keyboard_image2.PNG  used on input line 121.
@@ -1517,7 +1541,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--130
  []
 
 [32 <./Development/keyboard_image2.PNG>]
-<Development/key_AfterAnimation.PNG, id=601, 339.06676pt x 263.7855pt>
+<Development/key_AfterAnimation.PNG, id=639, 339.06676pt x 263.7855pt>
 File: Development/key_AfterAnimation.PNG Graphic file (type png)
 <use Development/key_AfterAnimation.PNG>
 Package pdftex.def Info: Development/key_AfterAnimation.PNG  used on input line 138.
@@ -1576,7 +1600,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 155--159
  []
 
 [34 <./Development/key_AfterAnimation.PNG>]
-<Development/frequency_changes.png, id=620, 722.7pt x 433.62pt>
+<Development/frequency_changes.png, id=658, 722.7pt x 433.62pt>
 File: Development/frequency_changes.png Graphic file (type png)
 <use Development/frequency_changes.png>
 Package pdftex.def Info: Development/frequency_changes.png  used on input line 172.
@@ -1586,7 +1610,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--181
 
  []
 
-<Development/semitone_shifts.png, id=622, 722.7pt x 433.62pt>
+<Development/semitone_shifts.png, id=660, 722.7pt x 433.62pt>
 File: Development/semitone_shifts.png Graphic file (type png)
 <use Development/semitone_shifts.png>
 Package pdftex.def Info: Development/semitone_shifts.png  used on input line 189.
@@ -1602,7 +1626,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 183--192
  []
 
 [35 <./Development/frequency_changes.png>]
-<Development/waveform_comparison_combined.png, id=634, 1011.78pt x 722.7pt>
+<Development/waveform_comparison_combined.png, id=672, 1011.78pt x 722.7pt>
 File: Development/waveform_comparison_combined.png Graphic file (type png)
 <use Development/waveform_comparison_combined.png>
 Package pdftex.def Info: Development/waveform_comparison_combined.png  used on input line 210.
@@ -1636,22 +1660,74 @@ Underfull \hbox (badness 10000) in paragraph at lines 236--239
 
  (Scenario/Scenario.tex
 chapter 6.
-) [40
+[40
 
 
 
 
-]
+] [41] [42]
+<Scenario/scenario_PDF2.pdf, id=727, 1081.78151pt x 2834.81888pt>
+File: Scenario/scenario_PDF2.pdf Graphic file (type pdf)
+<use Scenario/scenario_PDF2.pdf>
+Package pdftex.def Info: Scenario/scenario_PDF2.pdf  used on input line 87.
+(pdftex.def)             Requested size: 1081.77887pt x 2834.812pt.
+File: Scenario/scenario_PDF2.pdf Graphic file (type pdf)
+<use Scenario/scenario_PDF2.pdf>
+Package pdftex.def Info: Scenario/scenario_PDF2.pdf  used on input line 87.
+(pdftex.def)             Requested size: 1081.77887pt x 2834.812pt.
+<Scenario/scenario_PDF2.pdf, id=730, page=1, 1081.78151pt x 2834.81888pt>
+File: Scenario/scenario_PDF2.pdf Graphic file (type pdf)
+<use Scenario/scenario_PDF2.pdf, page 1>
+Package pdftex.def Info: Scenario/scenario_PDF2.pdf , page1 used on input line 87.
+(pdftex.def)             Requested size: 1081.77887pt x 2834.812pt.
+File: Scenario/scenario_PDF2.pdf Graphic file (type pdf)
+<use Scenario/scenario_PDF2.pdf, page 1>
+Package pdftex.def Info: Scenario/scenario_PDF2.pdf , page1 used on input line 87.
+(pdftex.def)             Requested size: 1082.07599pt x 2835.59059pt.
+ [43]
+File: Scenario/scenario_PDF2.pdf Graphic file (type pdf)
+<use Scenario/scenario_PDF2.pdf, page 1>
+Package pdftex.def Info: Scenario/scenario_PDF2.pdf , page1 used on input line 87.
+(pdftex.def)             Requested size: 1082.07599pt x 2835.59059pt.
+File: Scenario/scenario_PDF2.pdf Graphic file (type pdf)
+<use Scenario/scenario_PDF2.pdf, page 1>
+Package pdftex.def Info: Scenario/scenario_PDF2.pdf , page1 used on input line 87.
+(pdftex.def)             Requested size: 1082.07599pt x 2835.59059pt.
+File: Scenario/scenario_PDF2.pdf Graphic file (type pdf)
+<use Scenario/scenario_PDF2.pdf, page 1>
+Package pdftex.def Info: Scenario/scenario_PDF2.pdf , page1 used on input line 87.
+(pdftex.def)             Requested size: 1082.07599pt x 2835.59059pt.
+ [44
+
+ <./Scenario/scenario_PDF2.pdf>] [45] [46]
+Overfull \hbox (2.53528pt too wide) in paragraph at lines 159--160
+[]\T1/lmr/bx/n/12 Keystroke-level ac-cu-racy: \T1/lmr/m/n/12 The ac-cu-racy based on the num-ber of in-cor-rect keystrokes
+ []
+
+<Scenario/Correct_Phrase.PNG, id=779, 446.26724pt x 221.02576pt>
+File: Scenario/Correct_Phrase.PNG Graphic file (type png)
+<use Scenario/Correct_Phrase.PNG>
+Package pdftex.def Info: Scenario/Correct_Phrase.PNG  used on input line 173.
+(pdftex.def)             Requested size: 211.26031pt x 104.63083pt.
+<Scenario/wrong_Phrase.PNG, id=780, 441.44925pt x 216.81pt>
+File: Scenario/wrong_Phrase.PNG Graphic file (type png)
+<use Scenario/wrong_Phrase.PNG>
+Package pdftex.def Info: Scenario/wrong_Phrase.PNG  used on input line 180.
+(pdftex.def)             Requested size: 211.26031pt x 103.75664pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[47]) [48 <./Scenario/Correct_Phrase.PNG> <./Scenario/wrong_Phrase.PNG>]
 chapter 7.
-(main.bbl [41
+(main.bbl [49
 
 
 
 ]
 chapter without number
-[42
+[50
 
-] [43] [44] [45]) [46] (main.aux (Introduction/introdution.aux) (Background/Background.aux) (Approach/Approach.aux) (HapticImplementation/hapticImplementation.aux) (Development/HardwareSelection.aux) (Development/Conception.aux) (Scenario/Scenario.aux))
+] [51] [52] [53]) [54] (main.aux (Introduction/introdution.aux) (Background/Background.aux) (Approach/Approach.aux) (HapticImplementation/hapticImplementation.aux) (Development/HardwareSelection.aux) (Development/Conception.aux) (Scenario/Scenario.aux))
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1659,17 +1735,17 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 24970 strings out of 475386
- 565995 string characters out of 2776906
- 1041826 words of memory out of 3000000
- 45715 multiletter control sequences out of 15000+600000
- 562584 words of font info for 114 fonts, out of 8000000 for 9000
+ 26238 strings out of 475386
+ 586574 string characters out of 2776906
+ 1070523 words of memory out of 3000000
+ 46905 multiletter control sequences out of 15000+600000
+ 562592 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,20n,119p,10690b,724s stack positions out of 10000i,1000n,20000p,200000b,80000s
-<C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on main.pdf (53 pages, 2318252 bytes).
+<C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmb10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi7.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi9.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr17.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr7.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr9.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy9.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/kheir/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
+Output written on main.pdf (61 pages, 2504092 bytes).
 PDF statistics:
- 1020 PDF objects out of 1200 (max. 8388607)
- 241 named destinations out of 1000 (max. 500000)
- 518 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1212 PDF objects out of 1440 (max. 8388607)
+ 291 named destinations out of 1000 (max. 500000)
+ 692 words of extra memory for PDF output out of 10000 (max. 10000000)
 

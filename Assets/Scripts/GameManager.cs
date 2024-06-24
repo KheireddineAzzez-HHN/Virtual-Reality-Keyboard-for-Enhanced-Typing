@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour
     public ConfigManager configManager;
    
     private int keyboardTypeIndex;
-    public string CurrentKeyboardType;
+
+    public string CurrentKeyboardType { get; set; }
+
     public  current_Scene_Env envComponent;
     public static event Action TypingCompleted;
 
@@ -24,9 +26,10 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null)
         {
+            InitializeConfig();
+
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            InitializeConfig();
 
             SceneManager.sceneLoaded += OnSceneLoaded; // Register the event
 
@@ -55,7 +58,7 @@ public class GameManager : MonoBehaviour
         // Check the environment type and update the collection name
 
 
-         envComponent = FindObjectOfType<current_Scene_Env>();
+        envComponent = FindObjectOfType<current_Scene_Env>();
 
         if (envComponent != null)
         {
@@ -63,13 +66,15 @@ public class GameManager : MonoBehaviour
             {
                 MongoDBUtility.Instance.UpdateCollectionName("Prod");
                 envComponent.update_current_Scene_Env();
-                
+                UpdateKeyboardAppearance();
+
 
             }
             else if (envComponent.Scene_Type == KeyboardConfig.env_data_collection.Test)
             {
                 MongoDBUtility.Instance.UpdateCollectionName("Test");
                 envComponent.update_current_Scene_Env();
+                UpdateKeyboardAppearance();
 
 
             }
@@ -108,7 +113,6 @@ public class GameManager : MonoBehaviour
 
         }
         CurrentKeyboardType = keyboardTypes[keyboardTypeIndex];
-        UpdateKeyboardAppearance();
 
     }
 
@@ -164,7 +168,7 @@ public class GameManager : MonoBehaviour
 
     public current_Scene_Env GetCurrentEnv()
     {
-        return FindObjectOfType<current_Scene_Env>();
+        return this.envComponent;
     }
 
     private void UpdateKeyboardAppearance()
