@@ -39,6 +39,12 @@ Melanie Baljko and Alvin Tam.
 T.~Bezmalinovic.
 \newblock This is how much meta is investing in vr, ar and horizon, 2022.
 
+\bibitem{bolt1980put}
+R.~A. Bolt.
+\newblock Put-that-there: Voice and gesture at the graphics interface.
+\newblock In {\em Proceedings of the 7th Annual Conference on Computer Graphics
+  and Interactive Techniques}, pages 262--270, 1980.
+
 \bibitem{bowman2007virtual}
 Doug~A. Bowman, Ernst Kruijff, Joseph~J. LaViola, and Ivan Poupyrev.
 \newblock 3d user interfaces: Theory and practice.
@@ -77,6 +83,13 @@ Fred~D. Davis.
 \newblock Perceived usefulness, perceived ease of use, and user acceptance of
   information technology.
 \newblock {\em MIS Quarterly}, 13(3):319--340, 1989.
+
+\bibitem{douglas1999impact}
+S.~A. Douglas, A.~E. Kirkpatrick, and I.~S. MacKenzie.
+\newblock Testing pointing device performance and user assessment with the iso
+  9241, part 9 standard.
+\newblock In {\em Proceedings of the SIGCHI Conference on Human Factors in
+  Computing Systems}, pages 215--222, 1999.
 
 \bibitem{dube2019textentry}
 J.~T. Dube and A.~S. Arif.

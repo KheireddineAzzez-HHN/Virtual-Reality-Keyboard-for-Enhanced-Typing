@@ -146,6 +146,39 @@ In our project, the scale values were adjusted during the animation. The X and Y
 \\\\  \noindent
 \\\\  \noindent
 
+
+\subsection{Hover Effect Implementation}
+
+In virtual reality (VR) environments, providing immediate visual feedback to users significantly enhances their interaction experience, improving both accuracy and comfort. One critical aspect of this feedback mechanism is the hover effect, which visually highlights key parts as users move their fingers over them. This section explains the logic behind the hover effect implementation in the VR keyboard, including the dynamic color changes of the key parts.
+
+\subsubsection{Detection of Hovered Key Parts}
+
+The hover effect is implemented by continuously monitoring the position of the user's thumb in the VR environment. A virtual bounding box is defined around the thumb, and this box is used to detect any interaction with the virtual keyboard key parts.
+
+\subsubsection{Raycasting Technique}
+
+To determine which key parts are being hovered over, a technique called raycasting is used. This involves projecting a virtual box around the thumb's position and checking for intersections with the key parts on the virtual keyboard. The system identifies which key parts are within this box, indicating that they are being hovered over by the user's thumb.
+
+\subsubsection{Visual Feedback Mechanism}
+
+Once a key part is detected as being hovered over, the system provides immediate visual feedback by changing the appearance of the key part. This visual change primarily involves altering the color of the key part. The color transition is determined based on a predefined start color and end color, and the specific weight assigned to each key part. The weight represents the degree of interaction or importance of the key part, allowing for a smooth gradient transition between the start and end colors \cite{douglas1999impact} .
+
+\subsubsection{Handling Multiple Key Parts}
+
+The system keeps track of the key parts that were previously hovered over. If the thumb moves away from a key part, the visual feedback for that key part is reset to its original state. This ensures that only the currently hovered key parts are visually highlighted, providing real-time feedback as the user moves their thumb across the virtual keyboard.
+
+\subsubsection{Interaction States}
+
+The hover effect is closely integrated with the overall interaction states of the virtual keyboard. When no key part is actively being pressed, the system focuses on detecting and highlighting the key parts being hovered over. If a key part is pressed, the hover detection is temporarily paused to prevent conflicts between hover and press feedback.
+
+\subsubsection{Dynamic Color Adjustment}
+
+The system dynamically adjusts the color of the key parts based on the user's actions. When a key part is hovered over, its color changes according to a calculated weight. The weight determines the blend between the start and end colors, using a linear interpolation technique to create a smooth transition. This provides immediate and clear visual feedback, enhancing the user's interaction experience. When the thumb moves away, the key part's color is reset to its original state, ensuring that the visual feedback accurately represents the current interaction state \cite{bolt1980put}.
+
+\subsubsection{User Experience Enhancement}
+
+By providing immediate and clear visual feedback through the hover effect, including dynamic color changes, the system enhances the user's typing experience in the VR environment. Users can easily see which key parts they are about to press, reducing errors and increasing typing efficiency. This real-time feedback is crucial for creating a more intuitive and engaging virtual interaction \cite{norman2013design}.
+
 \subsection{Key Press Sound Feedback} 
 
 In our project, we aimed to generate unique audio feedback for each key press on a virtual keyboard. The process involved modifying the pitch of a base click sound to create distinct auditory signals for each key, ensuring that each key press has a unique sound effect. This approach enhances the user experience by providing clear and immediate auditory feedback, aligning with the principles of effective micro-interactions. We utilized the \texttt{pydub} library for audio processing \cite{pydub}, which was responsible for loading, modifying, and exporting audio files.

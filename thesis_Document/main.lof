@@ -20,11 +20,11 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Schematic representation of the virtual keyboard layout used for testing QWERTY input methods, displayed in Blender viewport shading (Material Display). \relax }}{31}{figure.caption.25}%
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Schematic representation of the virtual key layout used for testing QW- ERTY input methods, displayed in Blender viewport shading (Solid Display)\relax }}{32}{figure.caption.26}%
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Key Appearance After Animation\relax }}{34}{figure.caption.27}%
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Frequency changes across keys from 'a' to 'z'.\relax }}{35}{figure.caption.29}%
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Semitone shifts across keys from 'a' to 'z'.\relax }}{36}{figure.caption.31}%
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Waveform comparison of original and shifted sounds .\relax }}{37}{figure.caption.33}%
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Frequency changes across keys from 'a' to 'z'.\relax }}{37}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Semitone shifts across keys from 'a' to 'z'.\relax }}{38}{figure.caption.45}%
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Waveform comparison of original and shifted sounds .\relax }}{38}{figure.caption.47}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Examples of typing data stored in MongoDB\relax }}{48}{figure.caption.39}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Examples of typing data stored in MongoDB\relax }}{49}{figure.caption.53}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
