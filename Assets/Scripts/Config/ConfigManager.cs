@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 public class ConfigManager : MonoBehaviour
 {
     private GlobalConfig currentConfig;
+    public C_Gloves_configuration glovesConfig;
 
     public async Task<GlobalConfig> LoadGlobalConfig()
     {
@@ -28,6 +29,9 @@ public class ConfigManager : MonoBehaviour
         Debug.Log($"ForceFeedbackMiddle: {config.ForceFeedbackMiddle}");
         Debug.Log($"ForceFeedbackRing: {config.ForceFeedbackRing}");
         Debug.Log($"ForceFeedbackPinky: {config.ForceFeedbackPinky}");
+
+        glovesConfig.left_hand.QueueVibroLevel(SGCore.Finger.Thumb,config.BuzzThumb);
+        glovesConfig.right_hand.QueueVibroLevel(SGCore.Finger.Thumb, config.BuzzThumb);
 
 
     }

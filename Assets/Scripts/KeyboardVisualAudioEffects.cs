@@ -6,6 +6,7 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
     // Static instance of the class
 
     public static KeyboardVisualAudioEffects Instance { get; private set; }
+    public C_Gloves_configuration glovesConfiguration;
     void Awake()
     {
         if (Instance == null)
@@ -44,7 +45,16 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
         if (keystatus.Equals(KeyboardConfig.keyStatus.PRESSED))
         {
             HandleKeyPresss(key);
-          
+            if (key.keyFrame.Collided_with == KeyboardConfig.KeyboardInteractiveTag.Thumb_cap_left)
+            {
+                glovesConfiguration.sendVib("LFFT");
+
+            }
+            if (key.keyFrame.Collided_with == KeyboardConfig.KeyboardInteractiveTag.Thumb_cap_right)
+            {
+                glovesConfiguration.sendVib("RIGHT");
+
+            }
         }
 
         else

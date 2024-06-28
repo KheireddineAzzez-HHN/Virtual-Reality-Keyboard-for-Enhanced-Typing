@@ -17,10 +17,10 @@ public class Keyboard : MonoBehaviour
     public key keyToType = null;
     public bool animationtriggered = false;
     public static bool Keydetected = false;
-
+    public Collider collidedWith;
     public TMP_InputField inputText;
 
-    public static event Action<key, KeyboardConfig.keyStatus> OnKeyTypevisualEffect;
+    public static event Action<key, KeyboardConfig.keyStatus > OnKeyTypevisualEffect;
 
     public static event Action<key, KeyboardConfig.keyStatus> OnKeyTypeAduioEffect;
 
@@ -70,7 +70,7 @@ public class Keyboard : MonoBehaviour
         {
             keyToType = highestWeigh_Key();
             OnKeyTypevisualEffect.Invoke(keyToType, KeyboardConfig.keyStatus.PRESSED);
-
+            
             keyToType.animationControl.PressKey(keyToType.keyName);
             Keydetected = true;
 

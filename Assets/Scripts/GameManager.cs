@@ -2,12 +2,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
+using SGCore;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     private List<string> keyboardTypes;
     public SceneStackManager sceneStackManager;
-
+    public SG_
     public UserData UserData { get; set; }
     public string KeyboardType { get; set; } // Add KeyboardType
 
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     public ConfigManager configManager;
    
     private int keyboardTypeIndex;
-
+    public C_Gloves_configuration glovesConfig;
     public string CurrentKeyboardType { get; set; }
 
     public  current_Scene_Env envComponent;
@@ -44,6 +45,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
 
+    glovesConfig.sendVib("LEFT");
     }
     void OnDestroy()
     {

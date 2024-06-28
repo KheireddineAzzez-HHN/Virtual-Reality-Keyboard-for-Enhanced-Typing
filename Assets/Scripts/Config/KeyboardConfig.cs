@@ -187,7 +187,8 @@ public class KeyboardConfig : MonoBehaviour
     public enum KeyboardInteractiveTag
     {
 
-        Thumb_cap
+        Thumb_cap_right,
+        Thumb_cap_left
     }
 
     public enum KeySoundFiles

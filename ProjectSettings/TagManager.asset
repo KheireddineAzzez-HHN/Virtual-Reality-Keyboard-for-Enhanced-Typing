@@ -9,6 +9,8 @@ TagManager:
   - RoomLight
   - IndexNextPhrase
   - Keyboard
+  - Thumb_cap_left
+  - Thumb_cap_right
   layers:
   - Default
   - TransparentFX

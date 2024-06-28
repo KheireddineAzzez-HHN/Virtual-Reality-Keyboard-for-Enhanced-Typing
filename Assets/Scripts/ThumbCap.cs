@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
+
+
 public class ThumbCap : MonoBehaviour
 {
     public Vector3 RaycastBox;
@@ -12,14 +14,19 @@ public class ThumbCap : MonoBehaviour
     public static event Action<keyPart, KeyboardConfig.RayCast> onRayCastKeypart;
     private BoxCollider boxCollider;
     public float rayCastLength =1f;
-     
+    public HandType handtype;
     private bool lastPartsCleared = false;
+    private bool thumbActivecolliedd;
     private void Start()
     {
         boxCollider = gameObject.GetComponent<BoxCollider>();
         RaycastBox = new Vector3(boxCollider.size.x * MathF.Pow(10,-2), boxCollider.size.y*MathF.Pow(10, -2), boxCollider.size.z* MathF.Pow(10, -2));
     }
-
+    public enum HandType
+    {
+        RIGHT,
+        LEFT
+    }
     void Update()
     {
         if (Keyboard.Keydetected == false)
@@ -81,6 +88,9 @@ public class ThumbCap : MonoBehaviour
 
         lastKeyParts = hitKeyParts;
     }
+
+
+
 
 
 }

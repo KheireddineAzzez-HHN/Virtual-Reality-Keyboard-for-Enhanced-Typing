@@ -14,14 +14,32 @@ public class C_Gloves_configuration:MonoBehaviour
     public bool testVib = false;
     public Dictionary<SGCore.Finger, float> SlidersValuesVibration = new Dictionary<Finger, float>();
     public Dictionary<SGCore.Finger, float> SlidersValuesForceFeedback = new Dictionary<Finger, float>();
+    public HapticGlove right_hand = null;
+    public HapticGlove left_hand = null;
 
 
-
-
+    private void Start()
+    {
+        Connected_HapticsGloves();
+    }
     public HapticGlove[]  Connected_HapticsGloves()
     {
       HapticGlove[] Gloves =  SGCore.Nova.NovaGlove.GetHapticGloves(true);
+        foreach (HapticGlove glove in Gloves)
+        {
 
+            if (glove.IsRight())
+            {
+                right_hand = glove;
+
+            }
+            else
+            {
+
+                left_hand = glove;
+            }
+
+        }
         return Gloves;
     }
 
@@ -29,8 +47,9 @@ public class C_Gloves_configuration:MonoBehaviour
 
     {
 
-     foreach(HapticGlove glove in Gloves)
-        { foreach (KeyValuePair<Finger, float> item in  Fingers) {
+     foreach(HapticGlove glove in Gloves){ 
+            
+            foreach (KeyValuePair<Finger, float> item in  Fingers) {
                 glove.QueueFFBLevel(item.Key, item.Value);
 
             }
@@ -88,21 +107,45 @@ public class C_Gloves_configuration:MonoBehaviour
         SetVib(HapGloves, SlidersValuesVibration);
 
     }
-     void Update()
+
+    public void sendVib(string Hand)
     {
-        if (testFbb)
+
+        if (Hand == "LEFT")
         {
-            Handle_Fbb();
-
-
+            left_hand.SendHaptics();
         }
-        if (testVib)
+
+        if (Hand == "RIGHT")
         {
 
-            Handle_Vib();
-           
 
+            left_hand.SendHaptics();
         }
+
+
+
+
+    }
+    public void stopVib(string Hand)
+    {
+        if (Hand == "LEFT")
+        {
+            left_hand.StopVibrations();
+        }
+
+        if (Hand == "RIGHT")
+        {
+
+
+            left_hand.StopVibrations();
+        }
+
+
+    }
+    void Update()
+    {
+
     }
 
 

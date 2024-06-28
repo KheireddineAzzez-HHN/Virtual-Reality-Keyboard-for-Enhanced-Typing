@@ -68,7 +68,7 @@ public class current_Scene_Env : MonoBehaviour
 
         if (Scene_Type == KeyboardConfig.env_data_collection.Prod)
         {
-            ShowController();
+           ShowController();
 
             this.phrases_to_type = this.phrases_to_type = GameManager.Instance.configManager.GetCurrentConfig().Session.PhraseToTypeRealTest;
 

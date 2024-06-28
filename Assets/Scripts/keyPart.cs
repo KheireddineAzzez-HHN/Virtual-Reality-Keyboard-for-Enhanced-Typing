@@ -19,6 +19,7 @@ public class keyPart : MonoBehaviour
     public Vector3 boxsize;
     public KeyboardConfig.MaskLayers KeypartLayerName = KeyboardConfig.MaskLayers.KEYPARTLAYER;
     public float ColorThumbHover=0.0f;
+    public KeyboardConfig.KeyboardInteractiveTag Collided_with;
     private  keyPart()
     {
   
@@ -75,6 +76,8 @@ public class keyPart : MonoBehaviour
             out KeyboardConfig.KeyboardInteractiveTag tagValue) && Enum.IsDefined(typeof(KeyboardConfig.KeyboardInteractiveTag), tagValue))
         {
             parentKey.OnKeyPartCollisionEnter(this);
+            Enum.TryParse<KeyboardConfig.KeyboardInteractiveTag>(other.tag, true,
+            out KeyboardConfig.KeyboardInteractiveTag Collided_with);
         }
     }
 
@@ -84,6 +87,7 @@ public class keyPart : MonoBehaviour
             out KeyboardConfig.KeyboardInteractiveTag tagValue) && Enum.IsDefined(typeof(KeyboardConfig.KeyboardInteractiveTag), tagValue))
         {
             parentKey.OnKeyPartCollisionExit(this);
+
         }
     }
 
