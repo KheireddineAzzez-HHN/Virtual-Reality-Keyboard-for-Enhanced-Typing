@@ -80,45 +80,45 @@ Warning--to sort, need author or key in presenceVr2021
 Warning--to sort, need author or key in T9
 Warning--to sort, need author or key in Productivity2014
 Warning--to sort, need author or key in Fitts2004
-You've used 87 entries,
+You've used 88 entries,
             2118 wiz_defined-function locations,
-            920 strings with 14276 characters,
-and the built_in function-call counts, 21185 in all, are:
-= -- 1985
-> -- 807
+            923 strings with 14326 characters,
+and the built_in function-call counts, 21378 in all, are:
+= -- 2001
+> -- 814
 < -- 3
-+ -- 337
-- -- 244
-* -- 1120
-:= -- 3504
-add.period$ -- 227
-call.type$ -- 87
-change.case$ -- 368
++ -- 340
+- -- 246
+* -- 1125
+:= -- 3535
+add.period$ -- 229
+call.type$ -- 88
+change.case$ -- 372
 chr.to.int$ -- 0
-cite$ -- 94
-duplicate$ -- 835
-empty$ -- 2007
-format.name$ -- 244
-if$ -- 4531
+cite$ -- 95
+duplicate$ -- 842
+empty$ -- 2029
+format.name$ -- 246
+if$ -- 4573
 int.to.chr$ -- 0
-int.to.str$ -- 87
+int.to.str$ -- 88
 missing$ -- 59
-newline$ -- 404
-num.names$ -- 160
-pop$ -- 585
+newline$ -- 408
+num.names$ -- 162
+pop$ -- 593
 preamble$ -- 1
-purify$ -- 293
+purify$ -- 296
 quote$ -- 0
-skip$ -- 695
+skip$ -- 705
 stack$ -- 0
-substring$ -- 952
-swap$ -- 118
+substring$ -- 957
+swap$ -- 119
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 324
+type$ -- 328
 warning$ -- 7
-while$ -- 193
-width$ -- 89
-write$ -- 822
+while$ -- 195
+width$ -- 90
+write$ -- 829
 (There were 34 warnings)

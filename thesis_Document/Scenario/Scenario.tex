@@ -6,8 +6,22 @@ This chapter details the implementation of a comprehensive typing test scenario 
 \section{Typing Test Scenario}
 
 \subsection{Overview of the Typing Test Scenario}
-The typing test scenario aims to assess the typing performance of users using different keyboard configurations in a VR environment. The system captures detailed user input data, records performance metrics, and manages the flow of the test to ensure a comprehensive evaluation. The phrases used in the test are sourced from Scott MacKenzie's phrase sets, which are widely recognized for text entry research \cite{mackenzie_phrase_set}.
-
+The typing test scenario aims to assess the typing performance of users using different keyboard configurations in a VR environment. Specifically, the test compares the MRTK (Mixed Reality Toolkit) Keyboard with a custom virtual keyboard designed for this study. The MRTK Keyboard, part of Microsoft's Mixed Reality Toolkit, provides a standardized virtual input method that includes features such as spatial awareness, robust input handling, and support for hand and eye tracking \cite{mrtk_keyboard}. It is designed to facilitate ease of use and seamless interaction within virtual reality environments, making it an ideal choice for evaluating virtual text entry.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Scenario/MRTK_KEyboard.PNG} % Replace with your image file name
+    \caption{ \centering MRTK Keyboard interface showing a curved QWERTY layout designed for virtual reality environments inisde unity.}
+    \label{fig:mrtk_keyboard}
+\end{figure}\\ \\
+The custom virtual keyboard, on the other hand, was created using Blender \ref{sec:Virtual Keyboard Conception} to incorporate enhanced haptic feedback mechanisms and ergonomic design tailored to improve user interaction and typing efficiency. This custom keyboard aims to address the limitations of existing virtual keyboards by providing a more intuitive and immersive typing experience through advanced haptic feedback and ergonomic considerations. 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Scenario/Custom_keyboard.PNG} % Replace with your image file name
+    \caption{ \centering Custom virtual keyboard interface designed with enhanced haptic feedback and ergonomic features for improved typing efficiency in VR inside unity.}
+    \label{fig:mrtk_keyboard}
+\end{figure}\\ \\
+The system captures detailed user input data, records performance metrics, and manages the flow of the test to ensure a comprehensive evaluation. The phrases used in the test are sourced from Scott MacKenzie's phrase sets, which are widely recognized in the field of text entry research. MacKenzie's phrase sets are designed to provide a standardized basis for evaluating text entry methods, featuring a wide range of commonly used words and phrases that reflect typical typing scenarios. These phrase sets are carefully curated to balance frequency and representativeness, ensuring that the typing tasks are both realistic and challenging \cite{mackenzie_phrase_set}. \\ \\
+By using these standardized phrases, the study can reliably measure typing performance metrics such as Words Per Minute (WPM) and Error Rate (ER), providing valuable insights into the efficiency and accuracy of each keyboard configuration. The consistent use of MacKenzie's phrase sets allows for comparability with other studies in the field, facilitating a broader understanding of virtual text entry performance. 
 \subsection{User Input Handling}
 The system continuously monitors the user's typing input in a designated text field, tracking each keystroke and identifying any mistakes made during the typing process. This allows for real-time data collection and analysis of user performance.
 

@@ -2710,9 +2710,9 @@ MonoBehaviour:
   palm_PinkyBtn: {fileID: 1212757790}
   palmUp: {fileID: 1326289055}
   palmDown: {fileID: 807056780}
-  testWaveform: {fileID: 11400000, guid: d652ba97235d1a847b2e617dc3af411e, type: 2}
-  palmWaveform01: {fileID: 11400000, guid: 1da6efaf228cc2646be5fc0feaafdef6, type: 2}
-  palmWaveform02: {fileID: 11400000, guid: 6692e38991f23f1428a158ddfa36fc79, type: 2}
+  testWaveform: {fileID: 0}
+  palmWaveform01: {fileID: 0}
+  palmWaveform02: {fileID: 0}
   palmDelay: 0.05
   sensorDataElement: {fileID: 984888793}
   resetNormalBtn: {fileID: 984423478}

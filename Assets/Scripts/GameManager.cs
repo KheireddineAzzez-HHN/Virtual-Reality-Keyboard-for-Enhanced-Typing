@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get; private set; }
     private List<string> keyboardTypes;
     public SceneStackManager sceneStackManager;
-    public SG_
     public UserData UserData { get; set; }
     public string KeyboardType { get; set; } // Add KeyboardType
 

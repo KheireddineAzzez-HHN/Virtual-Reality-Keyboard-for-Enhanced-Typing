@@ -68,24 +68,24 @@
 \contentsline {section}{\numberline {6.1}Introduction}{41}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Typing Test Scenario}{41}{section.6.2}%
 \contentsline {subsection}{\numberline {6.2.1}Overview of the Typing Test Scenario}{41}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}User Input Handling}{41}{subsection.6.2.2}%
-\contentsline {subsection}{\numberline {6.2.3}Data Collection}{41}{subsection.6.2.3}%
-\contentsline {subsection}{\numberline {6.2.4}Phrase Management}{41}{subsection.6.2.4}%
-\contentsline {subsection}{\numberline {6.2.5}Error and Accuracy Tracking}{42}{subsection.6.2.5}%
-\contentsline {subsection}{\numberline {6.2.6}Interactive Elements}{42}{subsection.6.2.6}%
-\contentsline {subsection}{\numberline {6.2.7}Data Storage}{42}{subsection.6.2.7}%
-\contentsline {subsection}{\numberline {6.2.8}Configuration and Setup}{42}{subsection.6.2.8}%
-\contentsline {subsection}{\numberline {6.2.9}Scene Management}{42}{subsection.6.2.9}%
-\contentsline {subsection}{\numberline {6.2.10}Scene Occurrences}{43}{subsection.6.2.10}%
-\contentsline {subsection}{\numberline {6.2.11}Adjustable Settings in the Database}{43}{subsection.6.2.11}%
-\contentsline {subsection}{\numberline {6.2.12}Detection of a Finished Phrase}{43}{subsection.6.2.12}%
-\contentsline {section}{\numberline {6.3}Workflow Summary}{44}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Typing Performance Metrics and Database Registration}{46}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Metrics Overview}{46}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Database Registration and Storage}{47}{subsection.6.4.2}%
-\contentsline {subsubsection}{\nonumberline Inserting Typing Data}{48}{subsubsection*.52}%
-\contentsline {subsubsection}{\nonumberline Fetching Global Configuration}{49}{subsubsection*.55}%
-\contentsline {subsubsection}{\nonumberline Inserting User Data}{49}{subsubsection*.57}%
-\contentsline {chapter}{\numberline {7}Conclusion}{50}{chapter.7}%
-\contentsline {chapter}{\nonumberline Bibliography}{51}{chapter*.58}%
+\contentsline {subsection}{\numberline {6.2.2}User Input Handling}{43}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Data Collection}{43}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Phrase Management}{43}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Error and Accuracy Tracking}{43}{subsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.2.6}Interactive Elements}{43}{subsection.6.2.6}%
+\contentsline {subsection}{\numberline {6.2.7}Data Storage}{43}{subsection.6.2.7}%
+\contentsline {subsection}{\numberline {6.2.8}Configuration and Setup}{43}{subsection.6.2.8}%
+\contentsline {subsection}{\numberline {6.2.9}Scene Management}{44}{subsection.6.2.9}%
+\contentsline {subsection}{\numberline {6.2.10}Scene Occurrences}{44}{subsection.6.2.10}%
+\contentsline {subsection}{\numberline {6.2.11}Adjustable Settings in the Database}{44}{subsection.6.2.11}%
+\contentsline {subsection}{\numberline {6.2.12}Detection of a Finished Phrase}{45}{subsection.6.2.12}%
+\contentsline {section}{\numberline {6.3}Workflow Summary}{45}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Typing Performance Metrics and Database Registration}{47}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Metrics Overview}{47}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Database Registration and Storage}{48}{subsection.6.4.2}%
+\contentsline {subsubsection}{\nonumberline Inserting Typing Data}{49}{subsubsection*.54}%
+\contentsline {subsubsection}{\nonumberline Fetching Global Configuration}{50}{subsubsection*.57}%
+\contentsline {subsubsection}{\nonumberline Inserting User Data}{50}{subsubsection*.59}%
+\contentsline {chapter}{\numberline {7}Conclusion}{51}{chapter.7}%
+\contentsline {chapter}{\nonumberline Bibliography}{52}{chapter*.60}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -24,7 +24,9 @@
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Semitone shifts across keys from 'a' to 'z'.\relax }}{38}{figure.caption.45}%
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Waveform comparison of original and shifted sounds .\relax }}{38}{figure.caption.47}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Examples of typing data stored in MongoDB\relax }}{49}{figure.caption.53}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces \centering MRTK Keyboard interface showing a curved QWERTY layout designed for virtual reality environments inisde unity.\relax }}{41}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces \centering Custom virtual keyboard interface designed with enhanced haptic feedback and ergonomic features for improved typing efficiency in VR inside unity.\relax }}{42}{figure.caption.52}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Examples of typing data stored in MongoDB\relax }}{50}{figure.caption.55}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

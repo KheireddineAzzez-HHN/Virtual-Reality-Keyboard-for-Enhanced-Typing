@@ -1495,6 +1495,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rayCastLength: 1.2
+  handtype: 0
 --- !u!65 &511875605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1697,6 +1698,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   rayCastLength: 1.2
+  handtype: 0
 --- !u!65 &593330917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6321,6 +6323,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8086107624132460579, guid: d4bae35f53bba5e4cbef9f5854242d5b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.581
+      objectReference: {fileID: 0}
     - target: {fileID: 8096180967766038185, guid: d4bae35f53bba5e4cbef9f5854242d5b,
         type: 3}
       propertyPath: m_Layer
@@ -6549,6 +6556,7 @@ MonoBehaviour:
   sceneStackManager: {fileID: 1815903651}
   nextSceneName: 
   configManager: {fileID: 1815903649}
+  glovesConfig: {fileID: 0}
   envComponent: {fileID: 0}
 --- !u!114 &1815903649
 MonoBehaviour:
@@ -6562,6 +6570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb697dbd03baa14a8f8d97bd02957a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  glovesConfig: {fileID: 0}
 --- !u!4 &1815903650
 Transform:
   m_ObjectHideFlags: 0
