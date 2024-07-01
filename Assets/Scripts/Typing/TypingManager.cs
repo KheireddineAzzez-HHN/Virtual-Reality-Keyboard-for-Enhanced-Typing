@@ -42,6 +42,21 @@ public class TypingManager : MonoBehaviour
 
     }
 
+    void ClearPhrases()
+    {
+        this.phraseCounterText.text = "0";
+        this.phrasesTyped = totalPhrases;
+        this.LoadNewPhrase();
+    }
+
+private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            ClearPhrases();
+        }
+
+    }
     void UseActiveButton()
     {
         foreach (Button button in buttons)

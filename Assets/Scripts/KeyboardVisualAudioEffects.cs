@@ -47,12 +47,12 @@ public class KeyboardVisualAudioEffects : MonoBehaviour
             HandleKeyPresss(key);
             if (key.keyFrame.Collided_with == KeyboardConfig.KeyboardInteractiveTag.Thumb_cap_left)
             {
-                glovesConfiguration.sendVib("LFFT");
+         glovesConfiguration.sendVib("LFFT");
 
             }
             if (key.keyFrame.Collided_with == KeyboardConfig.KeyboardInteractiveTag.Thumb_cap_right)
             {
-                glovesConfiguration.sendVib("RIGHT");
+            glovesConfiguration.sendVib("RIGHT");
 
             }
         }

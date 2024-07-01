@@ -130,7 +130,7 @@ To enhance the user experience, we propose integrating an animation feature. The
 For a \ac{VR} smartphone keyboard, choosing the right texture for the keys is essential to enhance realism and user experience. The texture should provide visual cues that simulate the feel of a real keyboard. Research in human-computer interaction (HCI) \cite{Fitts2004} has shown that reducing glare and reflections on surfaces can improve visibility and reduce eye strain. A Dark texture on the \ac{VR} keyboard keys can help achieve these goals, making it easier for users to see and interact with the keyboard.
 
 \section{Dynamic Virtual keyboard Interactions}
-
+In virtual environments, the interaction between users and virtual keyboards is a critical aspect of user experience. This section explores the various techniques and methodologies implemented to enhance the usability and responsiveness of virtual keyboards. By incorporating animation, audio feedback, key weight calculations, and hover effects, our project aims to create a seamless and intuitive typing experience for users.
 \subsection{Key Press Animation Feedback}
 For key press animation, the goal is to provide immediate feedback to the user, indicating that their input has been recognized. This type of animation falls under the category of micro-interactions. These animations are crucial in making interactions feel more tangible and responsive \cite{Hannah2021}. Therefore, a 0.2-second animation at 30 frames per second, resulting in 6 frames, would be consistent with these principles, offering a quick and responsive feedback loop that enhances the user experience without overwhelming the user with unnecessary motion or delay.\\ \\
 In our project, the scale values were adjusted during the animation. The X and Y components were each increased by approximately 11\%, while the Z component was increased by approximately 4\%. These adjustments were calculated to provide a noticeable yet subtle feedback effect, aligning with the principles of effective micro-interactions and ensuring a smooth, responsive user experience. We found that this scale percentage is the optimal size to avoid key collision during scaling, ensuring that the keys remain distinct and accessible during the animation. 
@@ -148,37 +148,6 @@ In our project, the scale values were adjusted during the animation. The X and Y
 \\\\  \noindent
 
 
-\subsection{Hover Effect Implementation}
-
-In virtual reality (VR) environments, providing immediate visual feedback to users significantly enhances their interaction experience, improving both accuracy and comfort. One critical aspect of this feedback mechanism is the hover effect, which visually highlights key parts as users move their fingers over them. This section explains the logic behind the hover effect implementation in the VR keyboard, including the dynamic color changes of the key parts.
-
-\subsubsection{Detection of Hovered Key Parts}
-
-The hover effect is implemented by continuously monitoring the position of the user's thumb in the VR environment. A virtual bounding box is defined around the thumb, and this box is used to detect any interaction with the virtual keyboard key parts.
-
-\subsubsection{Raycasting Technique}
-
-To determine which key parts are being hovered over, a technique called raycasting is used. This involves projecting a virtual box around the thumb's position and checking for intersections with the key parts on the virtual keyboard. The system identifies which key parts are within this box, indicating that they are being hovered over by the user's thumb.
-
-\subsubsection{Visual Feedback Mechanism}
-
-Once a key part is detected as being hovered over, the system provides immediate visual feedback by changing the appearance of the key part. This visual change primarily involves altering the color of the key part. The color transition is determined based on a predefined start color and end color, and the specific weight assigned to each key part. The weight represents the degree of interaction or importance of the key part, allowing for a smooth gradient transition between the start and end colors \cite{douglas1999impact} .
-
-\subsubsection{Handling Multiple Key Parts}
-
-The system keeps track of the key parts that were previously hovered over. If the thumb moves away from a key part, the visual feedback for that key part is reset to its original state. This ensures that only the currently hovered key parts are visually highlighted, providing real-time feedback as the user moves their thumb across the virtual keyboard.
-
-\subsubsection{Interaction States}
-
-The hover effect is closely integrated with the overall interaction states of the virtual keyboard. When no key part is actively being pressed, the system focuses on detecting and highlighting the key parts being hovered over. If a key part is pressed, the hover detection is temporarily paused to prevent conflicts between hover and press feedback.
-
-\subsubsection{Dynamic Color Adjustment}
-
-The system dynamically adjusts the color of the key parts based on the user's actions. When a key part is hovered over, its color changes according to a calculated weight. The weight determines the blend between the start and end colors, using a linear interpolation technique to create a smooth transition. This provides immediate and clear visual feedback, enhancing the user's interaction experience. When the thumb moves away, the key part's color is reset to its original state, ensuring that the visual feedback accurately represents the current interaction state \cite{bolt1980put}.
-
-\subsubsection{User Experience Enhancement}
-
-By providing immediate and clear visual feedback through the hover effect, including dynamic color changes, the system enhances the user's typing experience in the VR environment. Users can easily see which key parts they are about to press, reducing errors and increasing typing efficiency. This real-time feedback is crucial for creating a more intuitive and engaging virtual interaction \cite{norman2013design}.
 
 \subsection{Key Press Sound Feedback} 
 
@@ -257,11 +226,32 @@ The weight of each key part is determined based on its designated role and posit
 \begin{equation}
 W_{\text{base}} = 0.1 \quad \text{(as an example value)}
 \end{equation}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{Development/Edge_keypart.PNG}
+    \caption{\centering Unity editor showing the configuration and weight calculation for a key part on a VR keyboard.}
+\end{figure}
+
+\noindent
 For central and more interactive key parts, the weight is dynamically calculated based on the key part's Cartesian coordinates on the keyboard grid. This method emphasizes the importance of centrally-located key parts:
 \begin{equation}
 W(x, y) = \frac{1}{\sqrt{(x - x_{\text{center}})^2 + (y - y_{\text{center}})^2 + 1}}
 \end{equation}
 where $x_{\text{center}}$ and $y_{\text{center}}$ represent the coordinates of the central key part of the keyboard, and the addition of 1 in the denominator prevents division by zero, ensuring that central key parts have the highest weights.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{Development/Key_part_near_to_the_center.PNG}
+    \caption{\centering The Unity editor shows the configuration and weight calculation for a key part located far from the center on a VR keyboard.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{Development/Capture_more_near_to_the_center.PNG}
+    \caption{\centering Unity editor showing the configuration and weight calculation for a central key part on a VR keyboard.}
+\end{figure}
+
 
 \subsubsection*{2. Overall Key Weight Calculation}
 The total weight of a key at any moment is the sum of the weights of all its collided key parts. This sum is calculated periodically to determine the overall weight of the key:
@@ -287,6 +277,44 @@ This approach models real-world typing by dynamically adjusting key sensitivity 
 
 
 
+\subsection{Hover Effect Implementation}
+
+In virtual reality (VR) environments, providing immediate visual feedback to users significantly enhances their interaction experience, improving both accuracy and comfort. One critical aspect of this feedback mechanism is the hover effect, which visually highlights key parts as users move their fingers over them. This section explains the logic behind the hover effect implementation in the VR keyboard, including the dynamic color changes of the key parts.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{Development/Color_ThumbCap.PNG}
+    \caption{Illustration of the hover effect on a VR keyboard, showing the dynamic color changes as the user s thumb moves over different keys.}
+    \label{fig:keyboard_hover_effect}
+\end{figure} \noindent
+
+\subsubsection{Detection of Hovered Key Parts}
+
+The hover effect is implemented by continuously monitoring the position of the user's thumb in the VR environment. A virtual bounding box is defined around the thumb, and this box is used to detect any interaction with the virtual keyboard key parts.
+
+\subsubsection{Raycasting Technique}
+
+To determine which key parts are being hovered over, a technique called raycasting is used. This involves projecting a virtual box around the thumb's position and checking for intersections with the key parts on the virtual keyboard. The system identifies which key parts are within this box, indicating that they are being hovered over by the user's thumb.
+
+\subsubsection{Visual Feedback Mechanism}
+
+Once a key part is detected as being hovered over, the system provides immediate visual feedback by changing the appearance of the key part. This visual change primarily involves altering the color of the key part. The color transition is determined based on a predefined start color and end color, and the specific weight assigned to each key part. The weight represents the degree of interaction or importance of the key part, allowing for a smooth gradient transition between the start and end colors \cite{douglas1999impact} .
+
+\subsubsection{Handling Multiple Key Parts}
+
+The system keeps track of the key parts that were previously hovered over. If the thumb moves away from a key part, the visual feedback for that key part is reset to its original state. This ensures that only the currently hovered key parts are visually highlighted, providing real-time feedback as the user moves their thumb across the virtual keyboard.
+
+\subsubsection{Interaction States}
+
+The hover effect is closely integrated with the overall interaction states of the virtual keyboard. When no key part is actively being pressed, the system focuses on detecting and highlighting the key parts being hovered over. If a key part is pressed, the hover detection is temporarily paused to prevent conflicts between hover and press feedback.
+
+\subsubsection{Dynamic Color Adjustment}
+
+The system dynamically adjusts the color of the key parts based on the user's actions. When a key part is hovered over, its color changes according to a calculated weight. The weight determines the blend between the start and end colors, using a linear interpolation technique to create a smooth transition. This provides immediate and clear visual feedback, enhancing the user's interaction experience. When the thumb moves away, the key part's color is reset to its original state, ensuring that the visual feedback accurately represents the current interaction state.
+
+\subsubsection{User Experience Enhancement}
+
+By providing immediate and clear visual feedback through the hover effect, including dynamic color changes, the system enhances the user's typing experience in the VR environment. Users can easily see which key parts they are about to press, reducing errors and increasing typing efficiency. This real-time feedback is crucial for creating a more intuitive and engaging virtual interaction \cite{norman2013design}.
 
 
 

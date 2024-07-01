@@ -210,4 +210,125 @@ User data, encapsulated in a structured format, is inserted into the MongoDB col
     \item User age
     \item User sex
 \end{itemize}
+\section{Post-Test Questionnaire}
 
+To evaluate the user experience and productivity in the virtual reality (VR) programming environment, a structured post-test questionnaire was administered to the participants. This questionnaire was designed to gather detailed feedback on various aspects, including demographic information, overall user experience, haptic feedback, visual and sound effects, productivity, ergonomics, and suggestions for future improvements. The design of this questionnaire was based on the guidelines provided in "Research Design: Qualitative, Quantitative, and Mixed Methods Approaches" by John Creswell, ensuring a robust mixed-methods approach suitable for capturing the complexity of user experiences in this study \cite{creswell2017research}. \clearpage
+
+The questionnaire comprised the following sections:
+
+\subsection{Section 1: Demographic Information}
+\begin{enumerate}
+    \item Name:
+    \item Occupation:
+    \item Experience with VR:
+    \begin{itemize}
+        \item Less than a month
+        \item 1-6 months
+        \item 6-12 months
+        \item Over a year
+        \item Never
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Section 2: Overall User Experience}
+\begin{enumerate}
+    \item Overall, how would you rate your experience with the VR programming environment?
+    \begin{itemize}
+        \item 1 - Very Poor
+        \item 2 - Poor
+        \item 3 - Neutral
+        \item 4 - Good
+        \item 5 - Very Good
+    \end{itemize}
+    \item How intuitive did you find the VR system to use?
+    \begin{itemize}
+        \item 1 - Very Difficult
+        \item 2 - Difficult
+        \item 3 - Neutral
+        \item 4 - Easy
+        \item 5 - Very Easy
+    \end{itemize}
+    \item What aspects did you find most engaging?
+    \item Describe any features you found particularly challenging.
+\end{enumerate}
+
+\subsection{Section 3: Haptic Feedback, Visual, and Sound Effects}
+\begin{enumerate}
+    \item How realistic did the haptic feedback provided by the SenseGlove Nova feel?
+    \begin{itemize}
+        \item 1 - Not Realistic at All
+        \item 2 - Slightly Realistic
+        \item 3 - Moderately Realistic
+        \item 4 - Realistic
+        \item 5 - Very Realistic
+    \end{itemize}
+    \item How much did the haptic feedback enhance your interaction with the virtual keyboard?
+    \begin{itemize}
+        \item 1 - Not at All
+        \item 2 - Slightly
+        \item 3 - Moderately
+        \item 4 - Significantly
+        \item 5 - Greatly
+    \end{itemize}
+    \item How effective were the visual feedback mechanisms (e.g., color changes on hover and press) in enhancing your interaction with the virtual keyboard?
+    \begin{itemize}
+        \item 1 - Not Effective at All
+        \item 2 - Slightly Effective
+        \item 3 - Moderately Effective
+        \item 4 - Effective
+        \item 5 - Very Effective
+    \end{itemize}
+    \item How realistic and immersive did the sound effects feel during your interaction with the virtual keyboard?
+    \begin{itemize}
+        \item 1 - Not Realistic at All
+        \item 2 - Slightly Realistic
+        \item 3 - Moderately Realistic
+        \item 4 - Realistic
+        \item 5 - Very Realistic
+    \end{itemize}
+    \item Overall, how immersive did you find the VR environment?
+    \begin{itemize}
+        \item 1 - Not Immersive at All
+        \item 2 - Slightly Immersive
+        \item 3 - Moderately Immersive
+        \item 4 - Immersive
+        \item 5 - Very Immersive
+    \end{itemize}
+    \item What elements contributed most to your sense of immersion?
+    \item Were there any elements that broke the immersion for you?
+\end{enumerate}
+
+\subsection{Section 4: Productivity and Ergonomics}
+\begin{enumerate}
+    \item How did the virtual keyboard design affect your typing speed?
+    \begin{itemize}
+        \item 1 - Significantly Slowed Down
+        \item 2 - Slightly Slowed Down
+        \item 3 - No Change
+        \item 4 - Slightly Increased
+        \item 5 - Significantly Increased
+    \end{itemize}
+    \item How did the virtual keyboard design affect your typing accuracy?
+    \begin{itemize}
+        \item 1 - Significantly Decreased
+        \item 2 - Slightly Decreased
+        \item 3 - No Change
+        \item 4 - Slightly Increased
+        \item 5 - Significantly Increased
+    \end{itemize}
+    \item Describe any physical discomfort or fatigue you experienced while using the VR environment.
+    \item How long were you able to use the system comfortably?
+    \begin{itemize}
+        \item Less than 15 minutes
+        \item 15-30 minutes
+        \item 30-60 minutes
+        \item More than 60 minutes
+    \end{itemize}
+    \item What ergonomic improvements would you recommend?
+\end{enumerate}
+\section{Conclusion}
+
+This chapter presented the implementation of a typing test scenario to evaluate user performance with different virtual keyboards in a VR environment. The framework includes user input handling, data collection, phrase management, error tracking, and database integration, comparing the MRTK Keyboard and a custom virtual keyboard.\\ \\
+The system captures detailed user input data, measuring metrics like Words Per Minute (WPM), Error Rate (ER), character-level accuracy, word-level accuracy, and typing speed. Standardized phrases from Scott MacKenzie's phrase sets ensure reliable and comparable results.\\ \\
+The implementation features real-time error tracking, interactive elements, and flexible configuration settings. Data is stored in a MongoDB database for comprehensive analysis, providing insights into user interaction and informing future improvements in virtual keyboard design.\\ \\
+In summary, this chapter establishes a robust framework for evaluating virtual keyboard performance in VR, contributing to the enhancement of virtual text entry systems.

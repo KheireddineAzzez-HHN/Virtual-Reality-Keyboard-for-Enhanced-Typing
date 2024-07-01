@@ -1496,6 +1496,7 @@ MonoBehaviour:
     m_Bits: 64
   rayCastLength: 1.2
   handtype: 0
+  thumbTransform: {fileID: 0}
 --- !u!65 &511875605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1660,7 +1661,7 @@ GameObject:
   - component: {fileID: 593330917}
   - component: {fileID: 593330916}
   m_Layer: 5
-  m_Name: cylinder_ThumbCap_right
+  m_Name: cylinder_ThumbCap_left
   m_TagString: Thumb_Cap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1699,6 +1700,7 @@ MonoBehaviour:
     m_Bits: 64
   rayCastLength: 1.2
   handtype: 0
+  thumbTransform: {fileID: 0}
 --- !u!65 &593330917
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3046,15 +3048,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4b650a383c3760f449b65ff48bccdd5f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.232
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4b650a383c3760f449b65ff48bccdd5f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.279
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4b650a383c3760f449b65ff48bccdd5f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.722
+      value: -1.493
       objectReference: {fileID: 0}
     - target: {fileID: 400004, guid: 4b650a383c3760f449b65ff48bccdd5f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5923,6 +5925,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KeyboardCurved_With_Controller
       objectReference: {fileID: 0}
+    - target: {fileID: 3137234155795618938, guid: d4bae35f53bba5e4cbef9f5854242d5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3153954648418915776, guid: d4bae35f53bba5e4cbef9f5854242d5b,
         type: 3}
       propertyPath: m_Layer
@@ -5942,6 +5949,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3358174435118216157, guid: d4bae35f53bba5e4cbef9f5854242d5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3414540109302642704, guid: d4bae35f53bba5e4cbef9f5854242d5b,
         type: 3}
@@ -5973,11 +5985,21 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3696017074369265592, guid: d4bae35f53bba5e4cbef9f5854242d5b,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3709497200618187418, guid: d4bae35f53bba5e4cbef9f5854242d5b,
         type: 3}
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3902393805520775422, guid: d4bae35f53bba5e4cbef9f5854242d5b,
+        type: 3}
+      propertyPath: glovesConfiguration
+      value: 
+      objectReference: {fileID: 1743581372}
     - target: {fileID: 4054373990677168495, guid: d4bae35f53bba5e4cbef9f5854242d5b,
         type: 3}
       propertyPath: m_Layer
@@ -6182,6 +6204,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6744714576637981973, guid: d4bae35f53bba5e4cbef9f5854242d5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6749515346034037589, guid: d4bae35f53bba5e4cbef9f5854242d5b,
         type: 3}
@@ -6408,6 +6435,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1743581370}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1743581372 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3696017074369265592, guid: d4bae35f53bba5e4cbef9f5854242d5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1743581370}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3d8300ae6b139c448b234b9d591fe2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1782249830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6556,7 +6595,7 @@ MonoBehaviour:
   sceneStackManager: {fileID: 1815903651}
   nextSceneName: 
   configManager: {fileID: 1815903649}
-  glovesConfig: {fileID: 0}
+  glovesConfig: {fileID: 1743581372}
   envComponent: {fileID: 0}
 --- !u!114 &1815903649
 MonoBehaviour:
@@ -6570,7 +6609,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb697dbd03baa14a8f8d97bd02957a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glovesConfig: {fileID: 0}
+  glovesConfig: {fileID: 1743581372}
 --- !u!4 &1815903650
 Transform:
   m_ObjectHideFlags: 0

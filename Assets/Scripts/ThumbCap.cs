@@ -17,10 +17,16 @@ public class ThumbCap : MonoBehaviour
     public HandType handtype;
     private bool lastPartsCleared = false;
     private bool thumbActivecolliedd;
+
+
+    public Transform thumbTransform;
     private void Start()
     {
+
         boxCollider = gameObject.GetComponent<BoxCollider>();
         RaycastBox = new Vector3(boxCollider.size.x * MathF.Pow(10,-2), boxCollider.size.y*MathF.Pow(10, -2), boxCollider.size.z* MathF.Pow(10, -2));
+
+     
     }
     public enum HandType
     {
@@ -29,6 +35,10 @@ public class ThumbCap : MonoBehaviour
     }
     void Update()
     {
+
+
+
+
         if (Keyboard.Keydetected == false)
         {
             DetectKeyPartsCovered();
@@ -90,7 +100,7 @@ public class ThumbCap : MonoBehaviour
     }
 
 
-
+    
 
 
 }

@@ -25,6 +25,20 @@ public class UserInputManager : MonoBehaviour
     {
 
     }
+    private void FakeSubmit()
+    {
+
+
+        this.saveButton.onClick.Invoke();
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // Call the method that you want to execute
+            FakeSubmit();
+        }
+    }
     private void InitializeAgeDropdown()
     {
         userAgeDropdown.ClearOptions();

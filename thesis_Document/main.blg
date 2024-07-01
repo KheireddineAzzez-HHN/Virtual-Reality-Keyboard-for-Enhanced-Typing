@@ -15,6 +15,8 @@ Reallocating 'name_of_file' (item size: 1) to 27 items.
 A level-1 auxiliary file: Development/Conception.aux
 Reallocating 'name_of_file' (item size: 1) to 22 items.
 A level-1 auxiliary file: Scenario/Scenario.aux
+Reallocating 'name_of_file' (item size: 1) to 40 items.
+A level-1 auxiliary file: DiscussionResults/discussionResutts.aux
 Reallocating 'name_of_file' (item size: 1) to 6 items.
 The style file: plain.bst
 Reallocating 'name_of_file' (item size: 1) to 4 items.
@@ -82,43 +84,43 @@ Warning--to sort, need author or key in Productivity2014
 Warning--to sort, need author or key in Fitts2004
 You've used 88 entries,
             2118 wiz_defined-function locations,
-            923 strings with 14326 characters,
-and the built_in function-call counts, 21378 in all, are:
-= -- 2001
-> -- 814
-< -- 3
-+ -- 340
-- -- 246
-* -- 1125
-:= -- 3535
+            922 strings with 14332 characters,
+and the built_in function-call counts, 21224 in all, are:
+= -- 1982
+> -- 820
+< -- 2
++ -- 342
+- -- 248
+* -- 1118
+:= -- 3525
 add.period$ -- 229
 call.type$ -- 88
 change.case$ -- 372
 chr.to.int$ -- 0
 cite$ -- 95
-duplicate$ -- 842
-empty$ -- 2029
-format.name$ -- 246
-if$ -- 4573
+duplicate$ -- 831
+empty$ -- 2010
+format.name$ -- 248
+if$ -- 4527
 int.to.chr$ -- 0
 int.to.str$ -- 88
-missing$ -- 59
+missing$ -- 60
 newline$ -- 408
 num.names$ -- 162
-pop$ -- 593
+pop$ -- 595
 preamble$ -- 1
-purify$ -- 296
+purify$ -- 297
 quote$ -- 0
-skip$ -- 705
+skip$ -- 692
 stack$ -- 0
-substring$ -- 957
-swap$ -- 119
-text.length$ -- 3
+substring$ -- 929
+swap$ -- 109
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 328
+type$ -- 326
 warning$ -- 7
-while$ -- 195
+while$ -- 193
 width$ -- 90
-write$ -- 829
+write$ -- 828
 (There were 34 warnings)

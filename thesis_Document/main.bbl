@@ -39,12 +39,6 @@ Melanie Baljko and Alvin Tam.
 T.~Bezmalinovic.
 \newblock This is how much meta is investing in vr, ar and horizon, 2022.
 
-\bibitem{bolt1980put}
-R.~A. Bolt.
-\newblock Put-that-there: Voice and gesture at the graphics interface.
-\newblock In {\em Proceedings of the 7th Annual Conference on Computer Graphics
-  and Interactive Techniques}, pages 262--270, 1980.
-
 \bibitem{bowman2007virtual}
 Doug~A. Bowman, Ernst Kruijff, Joseph~J. LaViola, and Ivan Poupyrev.
 \newblock 3d user interfaces: Theory and practice.
@@ -66,6 +60,12 @@ Neil Charness.
 \bibitem{microsoft2022annual}
 Microsoft Corporation.
 \newblock Annual report, 2022.
+
+\bibitem{creswell2017research}
+John~W Creswell and J~David Creswell.
+\newblock {\em Research Design: Qualitative, Quantitative, and Mixed Methods
+  Approaches}.
+\newblock Sage publications, 2017.
 
 \bibitem{dahl2018text}
 Yngve Dahl and Kari~Thorelli Sørli.
